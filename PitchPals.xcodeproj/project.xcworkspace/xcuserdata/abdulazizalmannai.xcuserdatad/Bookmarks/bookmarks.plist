@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>query-specification</key>
+			<dict>
+				<key>query</key>
+				<string>text</string>
+				<key>scope</key>
+				<dict>
+					<key>named-scopes</key>
+					<array/>
+					<key>type</key>
+					<string>scope-chooser-compound-scope</string>
+					<key>workspace-location-predicates</key>
+					<array>
+						<dict>
+							<key>path-components</key>
+							<array>
+								<string>PitchPals.xcodeproj</string>
+							</array>
+							<key>rule</key>
+							<string>workspace-location</string>
+						</dict>
+						<dict>
+							<key>path-components</key>
+							<array/>
+							<key>root</key>
+							<string>dynamic-content</string>
+							<key>rule</key>
+							<string>workspace-location</string>
+						</dict>
+					</array>
+				</dict>
+				<key>term</key>
+				<dict>
+					<key>text</key>
+					<string>derived data</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>batch-find-query</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>0</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>0</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>PitchPals.xcodeproj</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>title</key>
+			<string>Error: Unable to open base configuration reference file '/Users/abdulazizalmannai/Desktop/PitchPals/Pods/Target Support Files/Pods-PitchPals/Pods-PitchPals.debug.xcconfig'.</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
