@@ -1,36 +1,83 @@
 import FirebaseDatabase
 import UIKit
 import FirebaseAuth
-
+import Firebase
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
-    var email: String = ""
-    var password: String = ""
-    var username: String = ""
-    var firstName: String = ""
-    var lastName: String = ""
+
+    // MARK: - UI Elements
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+
+    // MARK: - Variables
     var isLoading = false
     var errorMessage: String?
     var isSignUpSuccessful = false
+    
+    // Add the @Published property wrappers here
+    @Published var username: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var firstName: String = ""
+    @Published var lastName: String = ""
 
-    var ref: DatabaseReference!
-
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = Database.database().reference()
+        // Initialize Firestore
+        let db = Firestore.firestore()
+
+        // ... (Your other view setup)
+
+        // Configure UI elements
+        signUpButton.isEnabled = false
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+
+        // Add observers for text field changes
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        firstNameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        lastNameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
+    // MARK: - Actions
+    @objc func signUpButtonTapped() {
+        signUp()
+    }
+
+    @objc func textFieldDidChange() {
+        // Enable the sign up button if all fields are filled
+        signUpButton.isEnabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !usernameTextField.text!.isEmpty && !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty
+    }
+
+    // MARK: - Sign Up Logic
     func signUp() {
         isLoading = true
         errorMessage = nil
 
-        // Validate inputs
-        guard !email.isEmpty, !password.isEmpty, !username.isEmpty, !firstName.isEmpty, !lastName.isEmpty else {
+        // Get values from text fields
+        if let email = emailTextField.text, !email.isEmpty,
+           let password = passwordTextField.text, !password.isEmpty,
+           let username = usernameTextField.text, !username.isEmpty,
+           let firstName = firstNameTextField.text, !firstName.isEmpty,
+           let lastName = lastNameTextField.text, !lastName.isEmpty {
+            // All fields are filled, proceed with your logic
+            // ...
+        } else {
+            // Handle the case where one or more fields are empty
             self.errorMessage = "Please fill in all fields."
             self.isLoading = false
             return
         }
+
+
 
         // Firebase Auth sign up
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -46,32 +93,27 @@ class SignUpViewController: UIViewController {
                 return
             }
 
-            // Save user details in Firebase Database
-            self.saveUserDetails(userId: userId)
+            // Save user details in Firestore
+            self.saveUserDetails(userId: userId, email: self.email, password: self.password, username: self.username, firstName: self.firstName, lastName: self.lastName)
         }
     }
 
-    private func saveUserDetails(userId: String) {
+    // MARK: - Save User Details
+    private func saveUserDetails(userId: String, email: String, password: String, username: String, firstName: String, lastName: String) {
         let userData: [String: Any] = [
+            "email": email,
+            "password": password, // You might want to store a hashed password for security
             "username": username,
             "firstName": firstName,
-            "lastName": lastName,
-            "email": email,
-            "profileImageUrl": "Profile-Image-URL", // Replace this with actual profile image URL if available
-            "statistics": [
-                "gamesPlayed": 0,
-                "gamesWon": 0,
-                "gamesLost": 0,
-                "totalGoals": 0
-            ],
-            "following": [],
-            "followers": [],
-            "pastGames": [],
-            "upcomingGames": []
+            "lastName": lastName
         ]
 
-        ref.child("users").child(userId).setValue(userData) { [weak self] error, _ in
-            guard let self = self else { return }
+        // Use Firestore to save user data
+        let db = Firestore.firestore()
+        let usersCollection = db.collection("Users")
+        let userDocument = usersCollection.document(userId)
+
+        userDocument.setData(userData) { error in
             if let error = error {
                 self.errorMessage = "Failed to save user details: \(error.localizedDescription)"
             } else {

@@ -13,13 +13,13 @@ struct SignUpView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var viewModel = SignUpViewController() // ViewModel instance
 
-    @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var firstName: String = ""
     @State private var lastName: String = ""
     @State private var errorMessage: String? = nil
     @State private var isShowingAlert = false
+
 
     var body: some View {
         VStack {
@@ -41,8 +41,8 @@ struct SignUpView: View {
             HStack {
                 Image(systemName: "at")
                     .foregroundColor(.gray)
-                TextField("Username", text: $viewModel.username)
-                    .textContentType(.username)
+                TextField("Username", text: $viewModel.username) // Correct binding
+                                    .textContentType(.username)
             }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
