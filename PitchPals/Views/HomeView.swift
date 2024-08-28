@@ -24,7 +24,6 @@ struct HomeView: View {
         ZStack {
             // Background Image
             Image("Background-Image")
-                .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
@@ -104,37 +103,6 @@ struct HomeView: View {
                 .hidden()
                 
                 
-
-                Text("Or continue with:")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.top, 10)
-
-                // Social Media Sign In
-                HStack {
-                    Button(action: {
-                    }) {
-                        Image("apple-logo1")
-                            .resizable()
-                            .scaledToFit()
-                            .scaledToFit()
-                            .frame(width: 75, height: 65)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .padding(.horizontal, 10)
-
-                    }
-
-                    Button(action: {
-                        // Handle Facebook sign in
-                    }) {
-                        Image("facebook-logo")
-                            .resizable()
-                            .frame(width: 75, height: 65)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                    }
-                }
                 .padding()
                 
                 .padding(.bottom, 20)
@@ -164,13 +132,11 @@ struct HomeView: View {
 }
 
 
-
-
 // Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .previewDevice("iPhone 12")
+            .previewDevice("iPhone 15 Pro")
     }
 }
 

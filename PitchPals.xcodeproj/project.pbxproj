@@ -10,6 +10,9 @@
 		F2535EC72C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC82C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC92C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
+		F2535EDC2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
+		F2535EDD2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
+		F2535EDE2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
 		F264D9382C7A5BFF001B3214 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = F264D9372C7A5BFF001B3214 /* Stripe */; };
 		F264D93A2C7A5BFF001B3214 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = F264D9392C7A5BFF001B3214 /* StripeApplePay */; };
 		F264D93C2C7A5BFF001B3214 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = F264D93B2C7A5BFF001B3214 /* StripeCardScan */; };
@@ -109,6 +112,7 @@
 		C0F9C66892A0A25082D66C16 /* Pods_PitchPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D738F3B537E9DFD7DFF54168 /* Pods-PitchPalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPalsTests.debug.xcconfig"; path = "Target Support Files/Pods-PitchPalsTests/Pods-PitchPalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2535EDB2C7ED3B0008F45A1 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPalsApp.swift; sourceTree = "<group>"; };
 		F29F1F5C2B5DB5540085A9D0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,11 +168,10 @@
 		F29F20042B6064D50085A9D0 /* PitchPalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F20052B6064D50085A9D0 /* PitchPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F20062B6064F40085A9D0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F29F20082B6065CE0085A9D0 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		F29F20112B679CAE0085A9D0 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView2.swift; sourceTree = "<group>"; };
-		F29F20172B7129910085A9D0 /* soccer-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "soccer-player.png"; path = "assets/soccer-player.png"; sourceTree = SOURCE_ROOT; };
+		F29F20172B7129910085A9D0 /* soccer-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "soccer-player.png"; path = "PitchPals/Other/Assets/soccer-player.png"; sourceTree = SOURCE_ROOT; };
 		F2D9505B2BC0D98E0018EDB3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F2D9505D2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewViewModel.swift; sourceTree = "<group>"; };
 		F2D9505F2BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatisticsViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +239,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F2535ED22C7ED301008F45A1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F2535EDB2C7ED3B0008F45A1 /* football.png */,
+				F29F20172B7129910085A9D0 /* soccer-player.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		F29F1F4E2B5DB5540085A9D0 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +263,7 @@
 		F29F1F592B5DB5540085A9D0 /* PitchPals */ = {
 			isa = PBXGroup;
 			children = (
+				F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */,
 				F29F1F8D2B5DB9660085A9D0 /* Other */,
 				F29F1F892B5DB92F0085A9D0 /* Views */,
 				F29F1F8C2B5DB9590085A9D0 /* Models */,
@@ -365,10 +378,8 @@
 		F29F1F8D2B5DB9660085A9D0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F2535ED22C7ED301008F45A1 /* Assets */,
 				F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */,
-				F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */,
-				F29F20172B7129910085A9D0 /* soccer-player.png */,
-				F29F20082B6065CE0085A9D0 /* football.png */,
 				F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */,
 				F29F1F872B5DB7DA0085A9D0 /* GoogleService-Info.plist */,
 				F29F1F6A2B5DB5560085A9D0 /* PitchPalsTests */,
@@ -497,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2535EDC2C7ED3B0008F45A1 /* football.png in Resources */,
 				F2535EC72C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2535EDD2C7ED3B0008F45A1 /* football.png in Resources */,
 				F2535EC82C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2535EDE2C7ED3B0008F45A1 /* football.png in Resources */,
 				F2535EC92C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
