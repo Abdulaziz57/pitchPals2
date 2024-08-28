@@ -1,9 +1,14 @@
 import SwiftUI
+import Firebase
+
 
 struct MainContentView: View {
     let darkTextColor = Color.black
     let lightGrayColor = Color.gray.opacity(0.6)
     @State private var selectedTab: Int = 0
+    @StateObject var venuesViewModel = VenuesViewModel()
+    @State private var firstName: String = ""
+    @State private var lastName: String = ""
     
     var body: some View {
         VStack {
@@ -14,7 +19,7 @@ struct MainContentView: View {
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(darkTextColor)
                     
-                    Text("Alex Doyle")
+                    Text("\(firstName) \(lastName)")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(darkTextColor)
                 }
@@ -29,47 +34,26 @@ struct MainContentView: View {
             .padding(.horizontal)
             .padding(.bottom, 30)
 
-            
+            // Dynamic Venue filter buttons
             // Venue filter buttons
-            HStack(spacing: 12) {
-                Button(action: {}) {
-                    
-                    Text("Maidan")
-                        .foregroundColor(darkTextColor)
-                        .padding(.horizontal)
-                        .padding(.vertical, 6)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(darkTextColor, lineWidth: 1)
-                        )
-                }
-                
-                Button(action: {}) {
-                    Text("Gharafa Outdoor")
-                        .foregroundColor(darkTextColor)
-                        .padding(.horizontal)
-                        .padding(.vertical, 6)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(darkTextColor, lineWidth: 1)
-                        )
-                }
-                
-                Button(action: {}) {
-                    Text("Dome")
-                        .foregroundColor(darkTextColor)
-                        .padding(.horizontal)
-                        .padding(.vertical, 6)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(darkTextColor, lineWidth: 1)
-                        )
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(Array(Set(venuesViewModel.venues.map { $0.name })), id: \.self) { venueName in
+                        Button(action: {
+                            // Handle filter action
+                        }) {
+                            Text(venueName)
+                                .foregroundColor(darkTextColor)
+                                .padding(.horizontal)
+                                .padding(.vertical, 6)
+                                .background(Color.white)
+                                .cornerRadius(20)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(darkTextColor, lineWidth: 1)
+                                )
+                        }
+                    }
                 }
             }
             .padding(.horizontal)
@@ -122,8 +106,7 @@ struct MainContentView: View {
             }
             .padding(.bottom, 30)
 
-            
-            // Players Near You section
+            // Players Near You section (this remains the same)
             VStack(alignment: .leading) {
                 Text("Players Near You")
                     .font(.headline)
@@ -144,7 +127,7 @@ struct MainContentView: View {
             }
             .padding(.bottom, 60)
             
-            // Custom tab bar
+            // Custom tab bar (this remains the same)
             HStack {
                 Spacer()
                 Image(systemName: "house.fill")
@@ -171,8 +154,38 @@ struct MainContentView: View {
         }
         .background(Color.white)
         .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            venuesViewModel.fetchVenues()
+            fetchUserName()
+                
+        }
     }
+    
+    // Function to fetch user's first and last name from Firestore
+    func fetchUserName() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No user ID found")
+            return
+        }
+
+        let db = Firestore.firestore()
+        let docRef = db.collection("Users").document(userId)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                self.firstName = data?["firstName"] as? String ?? "First Name"
+                self.lastName = data?["lastName"] as? String ?? "Last Name"
+                print("Fetched user data: \(self.firstName) \(self.lastName)")
+            } else {
+                print("User document does not exist")
+            }
+        }
+    }
+
 }
+
+
 
 struct MainContentView_Previews: PreviewProvider {
     static var previews: some View {

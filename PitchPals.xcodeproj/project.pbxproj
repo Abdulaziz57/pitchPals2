@@ -39,12 +39,12 @@
 		F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB12B5DC0800085A9D0 /* SignInView.swift */; };
 		F29F1FB42B5DC0870085A9D0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */; };
 		F29F1FB62B5DC0B90085A9D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB52B5DC0B90085A9D0 /* User.swift */; };
-		F29F1FB82B5DC2910085A9D0 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB72B5DC2910085A9D0 /* MainViewViewModel.swift */; };
+		F29F1FB82B5DC2910085A9D0 /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */; };
 		F29F1FBA2B5DC39B0085A9D0 /* SearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */; };
 		F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */; };
 		F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */; };
 		F29F1FC22B5DC3D70085A9D0 /* VenueListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC12B5DC3D70085A9D0 /* VenueListViewViewModel.swift */; };
-		F29F1FC42B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC32B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift */; };
+		F29F1FC42B5DC3E00085A9D0 /* VenusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */; };
 		F29F1FC62B5DC42E0085A9D0 /* MessageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC52B5DC42E0085A9D0 /* MessageDetailView.swift */; };
 		F29F1FC82B5DC4360085A9D0 /* FollowersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC72B5DC4360085A9D0 /* FollowersListView.swift */; };
 		F29F1FCA2B5DC43D0085A9D0 /* FollowingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC92B5DC43D0085A9D0 /* FollowingListView.swift */; };
@@ -102,15 +102,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18C6C56D8C59555299B28A85 /* Pods-PitchPalsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPalsUITests.debug.xcconfig"; path = "Target Support Files/Pods-PitchPalsUITests/Pods-PitchPalsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B3C9E836B03ED8FB677D09A /* Pods_PitchPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ABE600B5CBDA7D3DCA5AF19 /* Pods-PitchPals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPals.release.xcconfig"; path = "Target Support Files/Pods-PitchPals/Pods-PitchPals.release.xcconfig"; sourceTree = "<group>"; };
 		7EF3CD6F21FDB7B687F47726 /* Pods_PitchPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88ED75E80B1B7E7E0FCF2AA5 /* Pods-PitchPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPals.debug.xcconfig"; path = "Target Support Files/Pods-PitchPals/Pods-PitchPals.debug.xcconfig"; sourceTree = "<group>"; };
-		910A9516C8800C0C3369C39A /* Pods-PitchPalsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPalsUITests.release.xcconfig"; path = "Target Support Files/Pods-PitchPalsUITests/Pods-PitchPalsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BD952E3BA951C648A0B55FF9 /* Pods-PitchPalsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPalsTests.release.xcconfig"; path = "Target Support Files/Pods-PitchPalsTests/Pods-PitchPalsTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0F9C66892A0A25082D66C16 /* Pods_PitchPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D738F3B537E9DFD7DFF54168 /* Pods-PitchPalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchPalsTests.debug.xcconfig"; path = "Target Support Files/Pods-PitchPalsTests/Pods-PitchPalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2535EDB2C7ED3B0008F45A1 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPalsApp.swift; sourceTree = "<group>"; };
@@ -135,12 +129,12 @@
 		F29F1FB12B5DC0800085A9D0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F29F1FB52B5DC0B90085A9D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F29F1FB72B5DC2910085A9D0 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewModel.swift; sourceTree = "<group>"; };
 		F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FC12B5DC3D70085A9D0 /* VenueListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewViewModel.swift; sourceTree = "<group>"; };
-		F29F1FC32B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailViewViewModel.swift; sourceTree = "<group>"; };
+		F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenusViewModel.swift; sourceTree = "<group>"; };
 		F29F1FC52B5DC42E0085A9D0 /* MessageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailView.swift; sourceTree = "<group>"; };
 		F29F1FC72B5DC4360085A9D0 /* FollowersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListView.swift; sourceTree = "<group>"; };
 		F29F1FC92B5DC43D0085A9D0 /* FollowingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingListView.swift; sourceTree = "<group>"; };
@@ -216,19 +210,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6752A6E7BEFE90E265CBA4FC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				88ED75E80B1B7E7E0FCF2AA5 /* Pods-PitchPals.debug.xcconfig */,
-				5ABE600B5CBDA7D3DCA5AF19 /* Pods-PitchPals.release.xcconfig */,
-				D738F3B537E9DFD7DFF54168 /* Pods-PitchPalsTests.debug.xcconfig */,
-				BD952E3BA951C648A0B55FF9 /* Pods-PitchPalsTests.release.xcconfig */,
-				18C6C56D8C59555299B28A85 /* Pods-PitchPalsUITests.debug.xcconfig */,
-				910A9516C8800C0C3369C39A /* Pods-PitchPalsUITests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		6FB06479060457E5B74CA01D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,7 +236,6 @@
 				F29F20032B6064D50085A9D0 /* PitchPals.app */,
 				F29F20042B6064D50085A9D0 /* PitchPalsTests.xctest */,
 				F29F20052B6064D50085A9D0 /* PitchPalsUITests.xctest */,
-				6752A6E7BEFE90E265CBA4FC /* Pods */,
 				6FB06479060457E5B74CA01D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -332,12 +312,14 @@
 		F29F1F8A2B5DB93C0085A9D0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */,
+				F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */,
+				F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */,
+				F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */,
 				F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */,
 				F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */,
 				F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */,
 				F29F1FDD2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift */,
-				F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */,
-				F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */,
 				F29F1FDF2B5DC4A90085A9D0 /* MessageDetailViewViewModel.swift */,
 				F29F1FD92B5DC48C0085A9D0 /* NotificationsViewViewModel.swift */,
 				F29F1FE12B5DC4B20085A9D0 /* FollowersListViewViewModel.swift */,
@@ -349,11 +331,9 @@
 				F2D9505F2BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift */,
 				F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */,
 				F29F1FE72B5DC4CD0085A9D0 /* PasswordChangeViewViewModel.swift */,
-				F29F1FC32B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift */,
 				F2D950632BC0DF4B0018EDB3 /* GameRegistrationViewModel.swift */,
 				F2D950652BC1E70C0018EDB3 /* UserListViewModel.swift */,
 				F2D950672BC1E7690018EDB3 /* ReviewsViewModel.swift */,
-				F29F1FB72B5DC2910085A9D0 /* MainViewViewModel.swift */,
 				F29F1FDB2B5DC4930085A9D0 /* OnboardingViewViewModel.swift */,
 				F29F1FE92B5DC4D40085A9D0 /* AboutViewViewModel.swift */,
 			);
@@ -364,9 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				F29F1FB52B5DC0B90085A9D0 /* User.swift */,
+				F29F1FED2B5DC4F20085A9D0 /* Venue.swift */,
 				F29F1FEB2B5DC4E20085A9D0 /* Game.swift */,
 				F29F1FEF2B5DC4FB0085A9D0 /* Message.swift */,
-				F29F1FED2B5DC4F20085A9D0 /* Venue.swift */,
 				F29F1FF12B5DC5030085A9D0 /* Notification.swift */,
 				F2D9505B2BC0D98E0018EDB3 /* Settings.swift */,
 				F2D950612BC0DC840018EDB3 /* UserStatistics.swift */,
@@ -548,7 +528,7 @@
 				F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */,
 				F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */,
 				F29F1FD02B5DC4500085A9D0 /* AboutView.swift in Sources */,
-				F29F1FB82B5DC2910085A9D0 /* MainViewViewModel.swift in Sources */,
+				F29F1FB82B5DC2910085A9D0 /* MainContentViewModel.swift in Sources */,
 				F29F1FCA2B5DC43D0085A9D0 /* FollowingListView.swift in Sources */,
 				F29F1FCC2B5DC4440085A9D0 /* UserProfileEditView.swift in Sources */,
 				F29F1FE02B5DC4A90085A9D0 /* MessageDetailViewViewModel.swift in Sources */,
@@ -561,7 +541,7 @@
 				F29F1FC82B5DC4360085A9D0 /* FollowersListView.swift in Sources */,
 				F29F1FD82B5DC4860085A9D0 /* SignUpViewViewModel.swift in Sources */,
 				F29F1F5D2B5DB5540085A9D0 /* MainView.swift in Sources */,
-				F29F1FC42B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift in Sources */,
+				F29F1FC42B5DC3E00085A9D0 /* VenusViewModel.swift in Sources */,
 				F29F1FE82B5DC4CD0085A9D0 /* PasswordChangeViewViewModel.swift in Sources */,
 				F29F1FE42B5DC4B80085A9D0 /* FollowingListViewViewModel.swift in Sources */,
 				F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */,
