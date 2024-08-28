@@ -38,7 +38,6 @@
 		F29F1FB62B5DC0B90085A9D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB52B5DC0B90085A9D0 /* User.swift */; };
 		F29F1FB82B5DC2910085A9D0 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB72B5DC2910085A9D0 /* MainViewViewModel.swift */; };
 		F29F1FBA2B5DC39B0085A9D0 /* SearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */; };
-		F29F1FBC2B5DC3A60085A9D0 /* GamesListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBB2B5DC3A60085A9D0 /* GamesListViewViewModel.swift */; };
 		F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */; };
 		F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */; };
 		F29F1FC22B5DC3D70085A9D0 /* VenueListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC12B5DC3D70085A9D0 /* VenueListViewViewModel.swift */; };
@@ -52,7 +51,7 @@
 		F29F1FD22B5DC4680085A9D0 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */; };
 		F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD32B5DC4730085A9D0 /* SettingsViewViewModel.swift */; };
 		F29F1FD62B5DC47B0085A9D0 /* SignInViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */; };
-		F29F1FD82B5DC4860085A9D0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD72B5DC4860085A9D0 /* SignUpViewController.swift */; };
+		F29F1FD82B5DC4860085A9D0 /* SignUpViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */; };
 		F29F1FDA2B5DC48C0085A9D0 /* NotificationsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD92B5DC48C0085A9D0 /* NotificationsViewViewModel.swift */; };
 		F29F1FDC2B5DC4930085A9D0 /* OnboardingViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FDB2B5DC4930085A9D0 /* OnboardingViewViewModel.swift */; };
 		F29F1FDE2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FDD2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift */; };
@@ -71,7 +70,6 @@
 		F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F29F200D2B66FEE30085A9D0 /* GoogleSignInSwift */; };
 		F29F20102B66FF940085A9D0 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */; };
 		F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20112B679CAE0085A9D0 /* MainContentView.swift */; };
-		F29F20142B691CB00085A9D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20132B691CB00085A9D0 /* NetworkManager.swift */; };
 		F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */; };
 		F2D9505C2BC0D98E0018EDB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505B2BC0D98E0018EDB3 /* Settings.swift */; };
 		F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505D2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift */; };
@@ -135,7 +133,6 @@
 		F29F1FB52B5DC0B90085A9D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F29F1FB72B5DC2910085A9D0 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewModel.swift; sourceTree = "<group>"; };
-		F29F1FBB2B5DC3A60085A9D0 /* GamesListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FC12B5DC3D70085A9D0 /* VenueListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewViewModel.swift; sourceTree = "<group>"; };
@@ -149,7 +146,7 @@
 		F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FD32B5DC4730085A9D0 /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewViewModel.swift; sourceTree = "<group>"; };
-		F29F1FD72B5DC4860085A9D0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FD92B5DC48C0085A9D0 /* NotificationsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FDB2B5DC4930085A9D0 /* OnboardingViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FDD2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListviewViewModel.swift; sourceTree = "<group>"; };
@@ -170,7 +167,6 @@
 		F29F20082B6065CE0085A9D0 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		F29F20112B679CAE0085A9D0 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
-		F29F20132B691CB00085A9D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView2.swift; sourceTree = "<group>"; };
 		F29F20172B7129910085A9D0 /* soccer-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "soccer-player.png"; path = "assets/soccer-player.png"; sourceTree = SOURCE_ROOT; };
 		F2D9505B2BC0D98E0018EDB3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -323,13 +319,12 @@
 		F29F1F8A2B5DB93C0085A9D0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F29F1FBB2B5DC3A60085A9D0 /* GamesListViewViewModel.swift */,
 				F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */,
 				F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */,
 				F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */,
 				F29F1FDD2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift */,
 				F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */,
-				F29F1FD72B5DC4860085A9D0 /* SignUpViewController.swift */,
+				F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */,
 				F29F1FDF2B5DC4A90085A9D0 /* MessageDetailViewViewModel.swift */,
 				F29F1FD92B5DC48C0085A9D0 /* NotificationsViewViewModel.swift */,
 				F29F1FE12B5DC4B20085A9D0 /* FollowersListViewViewModel.swift */,
@@ -378,7 +373,6 @@
 				F29F1F872B5DB7DA0085A9D0 /* GoogleService-Info.plist */,
 				F29F1F6A2B5DB5560085A9D0 /* PitchPalsTests */,
 				F29F1F742B5DB5560085A9D0 /* PitchPalsUITests */,
-				F29F20132B691CB00085A9D0 /* NetworkManager.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -551,7 +545,7 @@
 				F29F1FF02B5DC4FB0085A9D0 /* Message.swift in Sources */,
 				F29F1F9A2B5DBF690085A9D0 /* ProfileView.swift in Sources */,
 				F29F1FC82B5DC4360085A9D0 /* FollowersListView.swift in Sources */,
-				F29F1FD82B5DC4860085A9D0 /* SignUpViewController.swift in Sources */,
+				F29F1FD82B5DC4860085A9D0 /* SignUpViewViewModel.swift in Sources */,
 				F29F1F5D2B5DB5540085A9D0 /* MainView.swift in Sources */,
 				F29F1FC42B5DC3E00085A9D0 /* VenueDetailViewViewModel.swift in Sources */,
 				F29F1FE82B5DC4CD0085A9D0 /* PasswordChangeViewViewModel.swift in Sources */,
@@ -559,7 +553,6 @@
 				F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */,
 				F29F1FC22B5DC3D70085A9D0 /* VenueListViewViewModel.swift in Sources */,
 				F29F1F9C2B5DC00D0085A9D0 /* GamesListView.swift in Sources */,
-				F29F20142B691CB00085A9D0 /* NetworkManager.swift in Sources */,
 				F29F1FA22B5DC0340085A9D0 /* VenueListView.swift in Sources */,
 				F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */,
 				F2D950622BC0DC840018EDB3 /* UserStatistics.swift in Sources */,
@@ -578,7 +571,6 @@
 				F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */,
 				F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */,
 				F29F1F5B2B5DB5540085A9D0 /* PitchPalsApp.swift in Sources */,
-				F29F1FBC2B5DC3A60085A9D0 /* GamesListViewViewModel.swift in Sources */,
 				F29F1FEA2B5DC4D40085A9D0 /* AboutViewViewModel.swift in Sources */,
 				F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */,
 				F29F1FEE2B5DC4F20085A9D0 /* Venue.swift in Sources */,

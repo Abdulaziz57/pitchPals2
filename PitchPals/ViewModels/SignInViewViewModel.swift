@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import FirebaseAuth
 import SwiftUI
 
 class SignInViewViewModel: ObservableObject {
@@ -16,23 +16,35 @@ class SignInViewViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var isAuthenticated = false  // To control navigation on successful sign-in
 
-    private var networkManager = NetworkManager.shared
-
     var onSignInSuccess: (() -> Void)?
 
     func signIn() {
         isLoading = true
         errorMessage = nil
 
-        networkManager.signIn(email: email, password: password) { [weak self] success, error in
+        // Check if the input fields are not empty
+        guard !email.isEmpty, !password.isEmpty else {
+            errorMessage = "Please fill in all fields."
+            isLoading = false
+            return
+        }
+
+        // Perform sign-in with Firebase Authentication
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             DispatchQueue.main.async {
                 self?.isLoading = false
+                
                 if let error = error {
-                    self?.errorMessage = error.localizedDescription
-                } else if success {
-                    self?.onSignInSuccess?()
+                    self?.errorMessage = "Failed to sign in: \(error.localizedDescription)"
+                } else if authResult != nil {
+                    // Sign-in successful
+                    self?.isAuthenticated = true
+                    self?.onSignInSuccess?()  // Notify the view that sign-in was successful
+                } else {
+                    self?.errorMessage = "Unknown error occurred."
                 }
             }
         }
     }
 }
+

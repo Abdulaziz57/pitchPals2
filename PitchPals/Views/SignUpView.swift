@@ -4,22 +4,16 @@
 //
 //  Created by Abdulaziz Al Mannai on 22/01/2024.
 //
-
 import SwiftUI
 import FirebaseAuth
 
 struct SignUpView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @State var viewModel = SignUpViewController() // ViewModel instance
+    @StateObject var viewModel = SignUpViewViewModel() // ViewModel instance
 
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
     @State private var errorMessage: String? = nil
     @State private var isShowingAlert = false
-
 
     var body: some View {
         VStack {
@@ -28,8 +22,6 @@ struct SignUpView: View {
                 .padding(.top, 10)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-
-
 
             Text("Only a few clicks away from your next football game")
                 .font(.subheadline)
@@ -41,22 +33,21 @@ struct SignUpView: View {
             HStack {
                 Image(systemName: "at")
                     .foregroundColor(.gray)
-                TextField("Username", text: $viewModel.username) // Correct binding
-                                    .textContentType(.username)
+                TextField("Username", text: $viewModel.username)
+                    .textContentType(.username)
             }
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding(.bottom, 1)
-                .padding(.horizontal, 10)
-
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+            .padding(.bottom, 1)
+            .padding(.horizontal, 10)
 
             // Email field
             HStack {
                 Image(systemName: "envelope")
                     .foregroundColor(.gray)
-                TextField("Email", text: $viewModel.email)
+                TextField("Email address", text: $viewModel.email)
                     .autocapitalization(.none)
                     .keyboardType(.emailAddress)
                     .textContentType(.emailAddress)
@@ -67,9 +58,6 @@ struct SignUpView: View {
             .cornerRadius(10)
             .padding(.bottom, 1)
             .padding(.horizontal, 10)
-
-
-
 
             // Password field
             HStack {
@@ -85,28 +73,31 @@ struct SignUpView: View {
             .padding(.bottom, 1)
             .padding(.horizontal, 10)
 
-
             // First Name field
-            TextField("First Name", text: $viewModel.firstName)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding(.bottom, 1)
-                .padding(.horizontal, 10)
-
-
-
+            HStack {
+                Image(systemName: "person")
+                    .foregroundColor(.gray)
+                TextField("First Name", text: $viewModel.firstName)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+            .padding(.bottom, 1)
+            .padding(.horizontal, 10)
 
             // Last Name field
-            TextField("Last Name", text: $viewModel.lastName)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding(.bottom, 5)
-                .padding(.horizontal, 10)
-
+            HStack {
+                Image(systemName: "person.fill")
+                    .foregroundColor(.gray)
+                TextField("Last Name", text: $viewModel.lastName)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+            .padding(.bottom, 5)
+            .padding(.horizontal, 10)
 
             // Sign Up Button
             Button("Sign up") {
@@ -128,7 +119,6 @@ struct SignUpView: View {
             NavigationLink(destination: MainContentView(), isActive: $viewModel.isSignUpSuccessful) { EmptyView() }
             .hidden()
 
-
             Text("By signing up, you agree to our Terms and conditions Privacy Policy and Cookie Policy")
                 .font(.footnote)
                 .padding(.horizontal, 40)
@@ -146,7 +136,6 @@ struct SignUpView: View {
                 .font(.headline)
                 .foregroundColor(.black)
                 .padding(.top, 10)
-
 
             // 'Sign in' navigation link
             NavigationLink(destination: SignInView()) {
@@ -166,8 +155,6 @@ struct SignUpView: View {
             }
             .padding(.horizontal, 10)
             .padding(.top, 10)
-            
-
 
             // Go Back Button
             Button("Go back") {
@@ -176,14 +163,11 @@ struct SignUpView: View {
             .foregroundColor(Color.black)
             .padding(.top, 10)
 
-
         }
         .navigationBarBackButtonHidden(true)
         .navigationTitle("")
         .navigationBarHidden(true)
     }
-    
- 
 }
 
 struct SignUpView_Previews: PreviewProvider {
@@ -191,4 +175,3 @@ struct SignUpView_Previews: PreviewProvider {
         SignUpView()
     }
 }
-

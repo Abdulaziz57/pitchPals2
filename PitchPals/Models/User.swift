@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct User: Identifiable, Codable {
     var id: String
@@ -26,44 +27,9 @@ struct User: Identifiable, Codable {
         var gamesLost: Int
         var totalGoals: Int
     }
-}
-
-extension User {
-    init?(dictionary: [String: Any]) {
-        guard let id = dictionary["id"] as? String,
-              let username = dictionary["username"] as? String,
-              let email = dictionary["email"] as? String,
-              let firstName = dictionary["firstName"] as? String,
-              let lastName = dictionary["lastName"] as? String,
-              let profileImageUrl = dictionary["profileImageUrl"] as? String,
-              let statisticsDict = dictionary["statistics"] as? [String: Int],
-              let following = dictionary["following"] as? [String],
-              let followers = dictionary["followers"] as? [String],
-              let pastGames = dictionary["pastGames"] as? [String],
-              let upcomingGames = dictionary["upcomingGames"] as? [String],
-              let gamesPlayed = statisticsDict["gamesPlayed"],
-              let gamesWon = statisticsDict["gamesWon"],
-              let gamesLost = statisticsDict["gamesLost"],
-              let totalGoals = statisticsDict["totalGoals"] else {
-            return nil
-        }
-        
-        self.id = id
-        self.username = username
-        self.email = email
-        self.firstName = firstName
-        self.lastName = lastName
-        self.profileImageUrl = profileImageUrl
-        self.following = following
-        self.followers = followers
-        self.pastGames = pastGames
-        self.upcomingGames = upcomingGames
-        self.statistics = UserStatistics(gamesPlayed: gamesPlayed, gamesWon: gamesWon, gamesLost: gamesLost, totalGoals: totalGoals)
-    }
-}
-
-extension User {
-    func toDictionary() -> [String: Any] {
+    
+    // Computed property to convert User to a dictionary
+    var dictionary: [String: Any] {
         return [
             "id": id,
             "username": username,
@@ -83,4 +49,8 @@ extension User {
             "upcomingGames": upcomingGames
         ]
     }
+}
+
+extension User {
+    static var MOCK_USER = User(id: NSUUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: {UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0)}(), following: ["String"], followers: ["String"], pastGames: ["String"], upcomingGames: ["String"])
 }
