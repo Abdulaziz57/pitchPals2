@@ -13,6 +13,15 @@
 		F2535EDC2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
 		F2535EDD2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
 		F2535EDE2C7ED3B0008F45A1 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = F2535EDB2C7ED3B0008F45A1 /* football.png */; };
+		F2535EE32C7FE09D008F45A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */; };
+		F2535EE42C7FE09E008F45A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */; };
+		F2535EE52C7FE09E008F45A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */; };
+		F2535EE72C801C64008F45A1 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EE62C801C64008F45A1 /* GameService.swift */; };
+		F2535EE82C801C64008F45A1 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EE62C801C64008F45A1 /* GameService.swift */; };
+		F2535EE92C801C64008F45A1 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EE62C801C64008F45A1 /* GameService.swift */; };
+		F2535EEF2C8028BC008F45A1 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */; };
+		F2535EF02C8028BC008F45A1 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */; };
+		F2535EF12C8028BC008F45A1 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */; };
 		F264D9382C7A5BFF001B3214 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = F264D9372C7A5BFF001B3214 /* Stripe */; };
 		F264D93A2C7A5BFF001B3214 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = F264D9392C7A5BFF001B3214 /* StripeApplePay */; };
 		F264D93C2C7A5BFF001B3214 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = F264D93B2C7A5BFF001B3214 /* StripeCardScan */; };
@@ -26,7 +35,7 @@
 		F29F1F962B5DBE0C0085A9D0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F29F1F952B5DBE0C0085A9D0 /* FirebaseFirestore */; };
 		F29F1F982B5DBE0C0085A9D0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F29F1F972B5DBE0C0085A9D0 /* FirebaseFirestoreSwift */; };
 		F29F1F9A2B5DBF690085A9D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F992B5DBF690085A9D0 /* ProfileView.swift */; };
-		F29F1F9C2B5DC00D0085A9D0 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9B2B5DC00D0085A9D0 /* GamesListView.swift */; };
+		F29F1F9C2B5DC00D0085A9D0 /* CreateGameView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9B2B5DC00D0085A9D0 /* CreateGameView3.swift */; };
 		F29F1F9E2B5DC0170085A9D0 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */; };
 		F29F1FA02B5DC0230085A9D0 /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */; };
 		F29F1FA22B5DC0340085A9D0 /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */; };
@@ -107,6 +116,8 @@
 		C0F9C66892A0A25082D66C16 /* Pods_PitchPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2535EDB2C7ED3B0008F45A1 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+		F2535EE62C801C64008F45A1 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPalsApp.swift; sourceTree = "<group>"; };
 		F29F1F5C2B5DB5540085A9D0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,7 +127,7 @@
 		F29F1F772B5DB5560085A9D0 /* PitchPalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F29F1F872B5DB7DA0085A9D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F29F1F992B5DBF690085A9D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		F29F1F9B2B5DC00D0085A9D0 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		F29F1F9B2B5DC00D0085A9D0 /* CreateGameView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView3.swift; sourceTree = "<group>"; };
 		F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
 		F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListView.swift; sourceTree = "<group>"; };
@@ -243,7 +254,6 @@
 		F29F1F592B5DB5540085A9D0 /* PitchPals */ = {
 			isa = PBXGroup;
 			children = (
-				F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */,
 				F29F1F8D2B5DB9660085A9D0 /* Other */,
 				F29F1F892B5DB92F0085A9D0 /* Views */,
 				F29F1F8C2B5DB9590085A9D0 /* Models */,
@@ -291,7 +301,7 @@
 				F29F1FA52B5DC0470085A9D0 /* SearchView.swift */,
 				F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */,
 				F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */,
-				F29F1F9B2B5DC00D0085A9D0 /* GamesListView.swift */,
+				F29F1F9B2B5DC00D0085A9D0 /* CreateGameView3.swift */,
 				F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */,
 				F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */,
 				F29F1FA32B5DC03B0085A9D0 /* VenueDetailView.swift */,
@@ -305,6 +315,7 @@
 				F29F1FC92B5DC43D0085A9D0 /* FollowingListView.swift */,
 				F29F1FCB2B5DC4440085A9D0 /* UserProfileEditView.swift */,
 				F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */,
+				F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +347,7 @@
 				F2D950672BC1E7690018EDB3 /* ReviewsViewModel.swift */,
 				F29F1FDB2B5DC4930085A9D0 /* OnboardingViewViewModel.swift */,
 				F29F1FE92B5DC4D40085A9D0 /* AboutViewViewModel.swift */,
+				F2535EE62C801C64008F45A1 /* GameService.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -358,6 +370,7 @@
 		F29F1F8D2B5DB9660085A9D0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F29F1F5E2B5DB5560085A9D0 /* Assets.xcassets */,
 				F2535ED22C7ED301008F45A1 /* Assets */,
 				F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */,
 				F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */,
@@ -489,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2535EDC2C7ED3B0008F45A1 /* football.png in Resources */,
+				F2535EE32C7FE09D008F45A1 /* Assets.xcassets in Resources */,
 				F2535EC72C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2535EDD2C7ED3B0008F45A1 /* football.png in Resources */,
+				F2535EE42C7FE09E008F45A1 /* Assets.xcassets in Resources */,
 				F2535EC82C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2535EDE2C7ED3B0008F45A1 /* football.png in Resources */,
+				F2535EE52C7FE09E008F45A1 /* Assets.xcassets in Resources */,
 				F2535EC92C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +541,7 @@
 				F2D950682BC1E7690018EDB3 /* ReviewsViewModel.swift in Sources */,
 				F29F1FA62B5DC0470085A9D0 /* SearchView.swift in Sources */,
 				F29F1FD62B5DC47B0085A9D0 /* SignInViewViewModel.swift in Sources */,
+				F2535EEF2C8028BC008F45A1 /* ChatbotView.swift in Sources */,
 				F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */,
 				F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */,
 				F29F1FD02B5DC4500085A9D0 /* AboutView.swift in Sources */,
@@ -546,7 +563,7 @@
 				F29F1FE42B5DC4B80085A9D0 /* FollowingListViewViewModel.swift in Sources */,
 				F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */,
 				F29F1FC22B5DC3D70085A9D0 /* VenueListViewViewModel.swift in Sources */,
-				F29F1F9C2B5DC00D0085A9D0 /* GamesListView.swift in Sources */,
+				F29F1F9C2B5DC00D0085A9D0 /* CreateGameView3.swift in Sources */,
 				F29F1FA22B5DC0340085A9D0 /* VenueListView.swift in Sources */,
 				F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */,
 				F2D950622BC0DC840018EDB3 /* UserStatistics.swift in Sources */,
@@ -563,6 +580,7 @@
 				F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */,
 				F29F1FA82B5DC0500085A9D0 /* MessagesListView.swift in Sources */,
 				F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */,
+				F2535EE72C801C64008F45A1 /* GameService.swift in Sources */,
 				F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */,
 				F29F1F5B2B5DB5540085A9D0 /* PitchPalsApp.swift in Sources */,
 				F29F1FEA2B5DC4D40085A9D0 /* AboutViewViewModel.swift in Sources */,
@@ -583,6 +601,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F29F1F6C2B5DB5560085A9D0 /* PitchPalsTests.swift in Sources */,
+				F2535EE82C801C64008F45A1 /* GameService.swift in Sources */,
+				F2535EF02C8028BC008F45A1 /* ChatbotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +610,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2535EF12C8028BC008F45A1 /* ChatbotView.swift in Sources */,
+				F2535EE92C801C64008F45A1 /* GameService.swift in Sources */,
 				F29F1F762B5DB5560085A9D0 /* PitchPalsUITests.swift in Sources */,
 				F29F1F782B5DB5560085A9D0 /* PitchPalsUITestsLaunchTests.swift in Sources */,
 			);

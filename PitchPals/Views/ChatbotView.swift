@@ -1,18 +1,18 @@
 //
-//  GamesListView.swift
+//  ChatbotView.swift
 //  PitchPals
 //
-//  Created by Abdulaziz Al Mannai on 22/01/2024.
+//  Created by Abdulaziz Al Mannai on 28/08/2024.
 //
 
 import SwiftUI
 
-struct GamesListView: View {
+struct ChatbotView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    GamesListView()
+    ChatbotView()
 }

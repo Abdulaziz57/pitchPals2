@@ -127,26 +127,35 @@ struct MainContentView: View {
             }
             .padding(.bottom, 60)
             
-            // Custom tab bar (this remains the same)
+            // Custom tab bar with navigation
             HStack {
                 Spacer()
-                Image(systemName: "house.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(darkTextColor)
+                NavigationLink(destination: MainContentView()) {
+                    Image(systemName: "house.fill")
+                        .font(.system(size: 28))
+                        .foregroundColor(darkTextColor)
+                }
                 Spacer()
-                Image(systemName: "magnifyingglass")
-                    .font(.system(size: 28))
-                    .foregroundColor(darkTextColor)
+                NavigationLink(destination: SearchView()) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 28))
+                        .foregroundColor(darkTextColor)
+                }
                 Spacer()
-                Image(systemName: "bell.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(darkTextColor)
+                NavigationLink(destination: ChatbotView()) {  // Replace with your Chatbot view
+                    Image(systemName: "message.fill") // Changed icon to represent chatbot
+                        .font(.system(size: 28))
+                        .foregroundColor(darkTextColor)
+                }
                 Spacer()
-                Image(systemName: "person.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(darkTextColor)
+                NavigationLink(destination: ProfileView()) {  // Replace with your Profile view
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 28))
+                        .foregroundColor(darkTextColor)
+                }
                 Spacer()
             }
+
             .background(Color.white.shadow(radius: 5))
             .background(Color.white)
             .cornerRadius(20)
