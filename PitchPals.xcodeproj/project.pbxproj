@@ -80,7 +80,6 @@
 		F29F20072B6064F40085A9D0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20062B6064F40085A9D0 /* HomeView.swift */; };
 		F29F200C2B66FEE30085A9D0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F29F200B2B66FEE30085A9D0 /* GoogleSignIn */; };
 		F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F29F200D2B66FEE30085A9D0 /* GoogleSignInSwift */; };
-		F29F20102B66FF940085A9D0 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */; };
 		F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20112B679CAE0085A9D0 /* MainContentView.swift */; };
 		F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */; };
 		F2D9505C2BC0D98E0018EDB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505B2BC0D98E0018EDB3 /* Settings.swift */; };
@@ -173,7 +172,6 @@
 		F29F20042B6064D50085A9D0 /* PitchPalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F20052B6064D50085A9D0 /* PitchPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F20062B6064F40085A9D0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		F29F20112B679CAE0085A9D0 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView2.swift; sourceTree = "<group>"; };
 		F29F20172B7129910085A9D0 /* soccer-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "soccer-player.png"; path = "PitchPals/Other/Assets/soccer-player.png"; sourceTree = SOURCE_ROOT; };
@@ -291,13 +289,12 @@
 		F29F1F892B5DB92F0085A9D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F29F200F2B66FF940085A9D0 /* AuthenticationManager.swift */,
 				F29F1F5C2B5DB5540085A9D0 /* MainView.swift */,
 				F29F20062B6064F40085A9D0 /* HomeView.swift */,
+				F29F20112B679CAE0085A9D0 /* MainContentView.swift */,
 				F29F1FB12B5DC0800085A9D0 /* SignInView.swift */,
 				F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */,
 				F29F1FCD2B5DC44B0085A9D0 /* PasswordChangeView.swift */,
-				F29F20112B679CAE0085A9D0 /* MainContentView.swift */,
 				F29F1FA52B5DC0470085A9D0 /* SearchView.swift */,
 				F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */,
 				F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */,
@@ -576,7 +573,6 @@
 				F29F1F9E2B5DC0170085A9D0 /* GameDetailView.swift in Sources */,
 				F29F1FEC2B5DC4E20085A9D0 /* Game.swift in Sources */,
 				F29F1FE22B5DC4B20085A9D0 /* FollowersListViewViewModel.swift in Sources */,
-				F29F20102B66FF940085A9D0 /* AuthenticationManager.swift in Sources */,
 				F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */,
 				F29F1FA82B5DC0500085A9D0 /* MessagesListView.swift in Sources */,
 				F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */,

@@ -5,19 +5,51 @@
 //
 
 // SearchView.swift
-
 import SwiftUI
-
-
-
 
 // MARK: - SearchView
 struct SearchView: View {
     let darkTextColor = Color.black
     let lightGrayColor = Color.gray.opacity(0.6)
     
+    @State private var searchText: String = ""
+
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            
+            // Title and Subtitle
+            Text("Search Games")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(darkTextColor)
+                .padding(.horizontal)
+                .padding(.top, 70)
+            
+            Text("Find and join your favorite games")
+                .font(.subheadline)
+                .foregroundColor(lightGrayColor)
+                .padding(.horizontal)
+                .padding(.bottom, 20)
+            
+            // Search Bar
+            HStack {
+                TextField("Search by name or location", text: $searchText)
+                    .padding(.leading, 20)
+                    .frame(height: 50)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .overlay(
+                        HStack {
+                            Spacer()
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 20)
+                        }
+                    )
+                    .padding(.horizontal)
+            }
+            .padding(.bottom, 20)
+            
             // Game cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -25,7 +57,7 @@ struct SearchView: View {
                         Image("dome") // Replace with your image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 180, height: 180) // Adjusted size
+                            .frame(width: 200, height: 200) // Adjusted size
                             .cornerRadius(20)
                         
                         Text("Yellow theme Interior")
@@ -35,6 +67,17 @@ struct SearchView: View {
                         Text("Central Park")
                             .font(.subheadline)
                             .foregroundColor(lightGrayColor)
+                        
+                        // Additional Info
+                        HStack {
+                            Text("Date: 11/02/2024")
+                                .font(.caption)
+                                .foregroundColor(lightGrayColor)
+                            Spacer()
+                            Text("8 Players")
+                                .font(.caption)
+                                .foregroundColor(lightGrayColor)
+                        }
                     }
                     .padding()
                     .background(Color.white)
@@ -55,6 +98,17 @@ struct SearchView: View {
                         Text("Riverfront Stadium")
                             .font(.subheadline)
                             .foregroundColor(lightGrayColor)
+                        
+                        // Additional Info
+                        HStack {
+                            Text("Date: 12/02/2024")
+                                .font(.caption)
+                                .foregroundColor(lightGrayColor)
+                            Spacer()
+                            Text("6 Players")
+                                .font(.caption)
+                                .foregroundColor(lightGrayColor)
+                        }
                     }
                     .padding()
                     .background(Color.white)
@@ -63,8 +117,8 @@ struct SearchView: View {
                 }
                 .padding(.horizontal)
             }
-            .padding(.bottom, 30)
-
+            
+            Spacer()
             
             // Custom tab bar (this remains the same)
             HStack {
@@ -77,9 +131,11 @@ struct SearchView: View {
                     .font(.system(size: 28))
                     .foregroundColor(darkTextColor)
                 Spacer()
-                Image(systemName: "bell.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(darkTextColor)
+                NavigationLink(destination: ChatbotView()) {
+                    Image(systemName: "message.fill")
+                        .font(.system(size: 28))
+                        .foregroundColor(darkTextColor)
+                }
                 Spacer()
                 Image(systemName: "person.fill")
                     .font(.system(size: 28))
@@ -93,10 +149,8 @@ struct SearchView: View {
         }
         .background(Color.white)
         .edgesIgnoringSafeArea(.all)
-
     }
 }
-
 
 // MARK: - SearchView_Previews
 struct SearchView_Previews: PreviewProvider {

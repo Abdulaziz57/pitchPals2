@@ -9,10 +9,27 @@ import SwiftUI
 
 struct ChatbotView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Ask me anything about football!")
+                .font(.title)
+                .padding()
+            
+            Spacer()
+            
+            // Placeholder for chatbot interface
+            Text("Chatbot interface goes here")
+                .foregroundColor(.gray)
+                .padding()
+            
+            Spacer()
+        }
+        .navigationTitle("Football Chatbot")
     }
 }
 
-#Preview {
-    ChatbotView()
+struct ChatbotView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatbotView()
+    }
 }
+
