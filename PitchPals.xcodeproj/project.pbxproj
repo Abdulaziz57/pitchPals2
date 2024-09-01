@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F245CE592C840754005DB2A7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE582C840754005DB2A7 /* SDWebImageSwiftUI */; };
+		F245CE5B2C8410BD005DB2A7 /* SubscribtionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE5A2C8410BD005DB2A7 /* SubscribtionView.swift */; };
+		F245CE5D2C84112F005DB2A7 /* SubscribtionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE5C2C84112F005DB2A7 /* SubscribtionManager.swift */; };
 		F2535EC72C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC82C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC92C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
@@ -113,6 +116,8 @@
 		4B3C9E836B03ED8FB677D09A /* Pods_PitchPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF3CD6F21FDB7B687F47726 /* Pods_PitchPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F9C66892A0A25082D66C16 /* Pods_PitchPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F245CE5A2C8410BD005DB2A7 /* SubscribtionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribtionView.swift; sourceTree = "<group>"; };
+		F245CE5C2C84112F005DB2A7 /* SubscribtionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribtionManager.swift; sourceTree = "<group>"; };
 		F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2535EDB2C7ED3B0008F45A1 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F2535EE62C801C64008F45A1 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F245CE592C840754005DB2A7 /* SDWebImageSwiftUI in Frameworks */,
 				F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */,
 				F29F1F942B5DBBB20085A9D0 /* FirebaseAuth in Frameworks */,
 				F29F200C2B66FEE30085A9D0 /* GoogleSignIn in Frameworks */,
@@ -291,9 +297,9 @@
 			children = (
 				F29F1F5C2B5DB5540085A9D0 /* MainView.swift */,
 				F29F20062B6064F40085A9D0 /* HomeView.swift */,
-				F29F20112B679CAE0085A9D0 /* MainContentView.swift */,
 				F29F1FB12B5DC0800085A9D0 /* SignInView.swift */,
 				F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */,
+				F29F20112B679CAE0085A9D0 /* MainContentView.swift */,
 				F29F1FCD2B5DC44B0085A9D0 /* PasswordChangeView.swift */,
 				F29F1FA52B5DC0470085A9D0 /* SearchView.swift */,
 				F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */,
@@ -313,6 +319,7 @@
 				F29F1FCB2B5DC4440085A9D0 /* UserProfileEditView.swift */,
 				F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */,
 				F2535EEE2C8028BC008F45A1 /* ChatbotView.swift */,
+				F245CE5A2C8410BD005DB2A7 /* SubscribtionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +381,7 @@
 				F29F1F872B5DB7DA0085A9D0 /* GoogleService-Info.plist */,
 				F29F1F6A2B5DB5560085A9D0 /* PitchPalsTests */,
 				F29F1F742B5DB5560085A9D0 /* PitchPalsUITests */,
+				F245CE5C2C84112F005DB2A7 /* SubscribtionManager.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -404,6 +412,7 @@
 				F264D9392C7A5BFF001B3214 /* StripeApplePay */,
 				F264D93B2C7A5BFF001B3214 /* StripeCardScan */,
 				F27E3FBD2C7C2EE800ECABA0 /* FirebaseDatabase */,
+				F245CE582C840754005DB2A7 /* SDWebImageSwiftUI */,
 			);
 			productName = PitchPals;
 			productReference = F29F20032B6064D50085A9D0 /* PitchPals.app */;
@@ -481,6 +490,7 @@
 				F29F1F842B5DB6190085A9D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F29F200A2B66FECE0085A9D0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				F264D9362C7A5BFF001B3214 /* XCRemoteSwiftPackageReference "stripe-ios" */,
+				F245CE572C84070F005DB2A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = F29F1F4E2B5DB5540085A9D0;
 			projectDirPath = "";
@@ -569,11 +579,13 @@
 				F29F1FF22B5DC5030085A9D0 /* Notification.swift in Sources */,
 				F29F20072B6064F40085A9D0 /* HomeView.swift in Sources */,
 				F29F1FDC2B5DC4930085A9D0 /* OnboardingViewViewModel.swift in Sources */,
+				F245CE5D2C84112F005DB2A7 /* SubscribtionManager.swift in Sources */,
 				F29F1FC62B5DC42E0085A9D0 /* MessageDetailView.swift in Sources */,
 				F29F1F9E2B5DC0170085A9D0 /* GameDetailView.swift in Sources */,
 				F29F1FEC2B5DC4E20085A9D0 /* Game.swift in Sources */,
 				F29F1FE22B5DC4B20085A9D0 /* FollowersListViewViewModel.swift in Sources */,
 				F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */,
+				F245CE5B2C8410BD005DB2A7 /* SubscribtionView.swift in Sources */,
 				F29F1FA82B5DC0500085A9D0 /* MessagesListView.swift in Sources */,
 				F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */,
 				F2535EE72C801C64008F45A1 /* GameService.swift in Sources */,
@@ -927,6 +939,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F245CE572C84070F005DB2A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
 		F264D9362C7A5BFF001B3214 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stripe/stripe-ios";
@@ -954,6 +974,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F245CE582C840754005DB2A7 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F245CE572C84070F005DB2A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		F264D9372C7A5BFF001B3214 /* Stripe */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F264D9362C7A5BFF001B3214 /* XCRemoteSwiftPackageReference "stripe-ios" */;

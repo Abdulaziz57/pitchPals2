@@ -10,41 +10,30 @@ import FirebaseFirestore
 @MainActor
 class VenuesViewModel: ObservableObject {
     @Published var venues: [Venue] = []
-
-    init() {
-        print("VenuesViewModel initialized")
-        fetchVenues()
-    }
+    private var didFetchVenues = false // This flag prevents duplicate fetches
 
     func fetchVenues() {
-        print("Fetching venues from Firestore...")
+        guard !didFetchVenues else { return } // Skip fetching if already fetched
+        didFetchVenues = true
+        
         let db = Firestore.firestore()
-
-        db.collection("Venues").getDocuments { snapshot, error in
+        db.collection("Venues").getDocuments { (snapshot, error) in
             if let error = error {
                 print("Error fetching venues: \(error)")
                 return
             }
-
+            
             guard let documents = snapshot?.documents else {
-                print("No venues found.")
+                print("No documents found")
                 return
             }
 
-            print("Snapshot found: \(documents.count) documents")
-            for document in documents {
-                print("Document data: \(document.data())")
-                let id = document.documentID
-                if let venue = Venue(id: id, dictionary: document.data()) {
-                    self.venues.append(venue)
-                } else {
-                    print("Error parsing venue: The data couldn’t be read because it is missing.")
-                }
+            self.venues = documents.compactMap { queryDocumentSnapshot -> Venue? in
+                let data = queryDocumentSnapshot.data()
+                return Venue(id: queryDocumentSnapshot.documentID, dictionary: data)
             }
             
             print("Total venues fetched: \(self.venues.count)")
         }
     }
-
 }
-

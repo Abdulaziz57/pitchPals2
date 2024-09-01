@@ -8,6 +8,12 @@
 import Foundation
 import FirebaseAuth
 
+enum UserRank: String, Codable {
+    case bronze = "Bronze"
+    case silver = "Silver"
+    case gold = "Gold"
+}
+
 struct User: Identifiable, Codable {
     var id: String
     var username: String
@@ -20,6 +26,9 @@ struct User: Identifiable, Codable {
     var followers: [String] // User IDs of followers
     var pastGames: [String] // Game IDs of past games
     var upcomingGames: [String] // Game IDs of upcoming games
+    var rank: UserRank = .bronze  // Default rank is Bronze
+
+    
 
     struct UserStatistics: Codable {
         var gamesPlayed: Int
@@ -46,11 +55,13 @@ struct User: Identifiable, Codable {
             "following": following,
             "followers": followers,
             "pastGames": pastGames,
-            "upcomingGames": upcomingGames
+            "upcomingGames": upcomingGames,
+            "rank": rank.rawValue  // Save the rank as a string
+
         ]
     }
 }
 
 extension User {
-    static var MOCK_USER = User(id: NSUUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: {UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0)}(), following: ["String"], followers: ["String"], pastGames: ["String"], upcomingGames: ["String"])
+    static var MOCK_USER = User(id: UUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0), following: ["String"], followers: ["String"], pastGames: ["String"], upcomingGames: ["String"], rank: .bronze)
 }

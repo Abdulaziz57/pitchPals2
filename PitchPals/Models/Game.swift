@@ -2,66 +2,64 @@
 //  PitchPals
 //
 //  Created by Abdulaziz Al Mannai on 22/01/2024.
-//
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct Game: Identifiable, Codable {
-    var id: String
+    @DocumentID var id: String? = UUID().uuidString
     var name: String
     var time: String
-    var venueId: String // Link to the venue
+    var venueId: DocumentReference // Reference to the venue document in Firestore
     var date: Date
-    var joinedPlayers: [String] // List of user IDs who have joined the game
+    var joinedPlayers: [String] = [] // Default to an empty array
 
-    init(id: String = UUID().uuidString, name: String, time: String, venueId: String, date: Date, joinedPlayers: [String] = []) {
-        self.id = id
+    // Custom CodingKeys for Firestore fields
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case time
+        case venueId
+        case date
+        case joinedPlayers
+    }
+
+    // Custom initializer for creating a new game
+    init(name: String, time: String, venueId: DocumentReference, date: Date, joinedPlayers: [String] = []) {
         self.name = name
         self.time = time
         self.venueId = venueId
         self.date = date
         self.joinedPlayers = joinedPlayers
     }
-}
 
-extension Game {
-    init?(dictionary: [String: Any]) {
-        guard let id = dictionary["id"] as? String,
-              let name = dictionary["name"] as? String,
-              let time = dictionary["time"] as? String,
-              let venueId = dictionary["venueId"] as? String,
-              let date = dictionary["date"] as? Date,
-              let joinedPlayers = dictionary["joinedPlayers"] as? [String] else {
+    // Custom initializer for decoding from a Firestore document
+    init?(document: [String: Any]) {
+        guard let id = document["id"] as? String,
+              let name = document["name"] as? String,
+              let time = document["time"] as? String,
+              let venueIdPath = document["venueId"] as? String,
+              let date = document["date"] as? Timestamp,
+              let joinedPlayers = document["joinedPlayers"] as? [String] else {
             return nil
         }
         self.id = id
         self.name = name
         self.time = time
-        self.venueId = venueId
-        self.date = date
+        self.venueId = Firestore.firestore().document(venueIdPath)
+        self.date = date.dateValue()
         self.joinedPlayers = joinedPlayers
     }
-}
 
-extension Game {
-    func toDictionary() throws -> [String: Any] {
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .formatted(DateFormatter.iso8601Full)
-        let data = try encoder.encode(self)
-        guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-            throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to convert data to dictionary"])
-        }
-        return dictionary
+    // Custom encoding method for Firestore
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(time, forKey: .time)
+        try container.encode(venueId.path, forKey: .venueId) // Convert DocumentReference to path
+        try container.encode(date, forKey: .date)
+        try container.encode(joinedPlayers, forKey: .joinedPlayers)
     }
-}
-
-extension DateFormatter {
-    static let iso8601Full: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter
-    }()
 }

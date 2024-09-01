@@ -4,7 +4,6 @@
 //
 //  Created by Abdulaziz Al Mannai on 22/01/2024.
 //
-
 import SwiftUI
 import FirebaseAuth
 
@@ -12,7 +11,6 @@ struct SignInView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = SignInViewViewModel()
     @State private var navigateToMainContent = false
-
 
     @State private var email = ""
     @State private var password = ""
@@ -46,7 +44,7 @@ struct SignInView: View {
 
                 // Password field
                 HStack {
-                    Image(systemName: "lock") // Use a non-filled icon for a lighter design
+                    Image(systemName: "lock")
                         .foregroundColor(.gray)
                     SecureField("Password", text: $viewModel.password)
                         .textContentType(.password)
@@ -71,9 +69,6 @@ struct SignInView: View {
                         .foregroundColor(Color.gray)
                 }
 
- 
-
-                
                 // Sign In Button
                 Button("Sign in") {
                     viewModel.signIn()
@@ -95,10 +90,7 @@ struct SignInView: View {
                     .background(Color.gray)
                     .padding(.vertical)
                     .padding(.horizontal, 24)
-                
-                .hidden()
 
-                
                 // 'Not a Pitch Pal yet?' text
                 Text("Not a Pitch Pal yet?")
                     .font(.subheadline)
@@ -123,29 +115,24 @@ struct SignInView: View {
                 }
                 .padding(.horizontal, 24)
 
-                
                 // 'Go back' button
                 Button("Go back") {
                     self.presentationMode.wrappedValue.dismiss()
                 }
-                
                 .font(.subheadline)
                 .foregroundColor(Color.black)
                 .fontWeight(.regular)
                 .padding(.top, 10)
-               
-
             }
             .padding(.top) // Adjust as needed to match the design
+            .navigationBarBackButtonHidden(true) // Hide the back button
         }
-        
         .onAppear {
             viewModel.onSignInSuccess = {
                 self.navigateToMainContent = true
             }
         }
     }
-
 }
 
 struct SignInView_Previews: PreviewProvider {

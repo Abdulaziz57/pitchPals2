@@ -1,7 +1,6 @@
 import SwiftUI
 import Firebase
 
-
 struct MainContentView: View {
     let darkTextColor = Color.black
     let lightGrayColor = Color.gray.opacity(0.6)
@@ -9,7 +8,7 @@ struct MainContentView: View {
     @StateObject var venuesViewModel = VenuesViewModel()
     @State private var firstName: String = ""
     @State private var lastName: String = ""
-    
+
     var body: some View {
         VStack {
             // Top bar with greeting and filter icon
@@ -18,24 +17,22 @@ struct MainContentView: View {
                     Text("Hello,")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(darkTextColor)
-                    
+
                     Text("\(firstName) \(lastName)")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(darkTextColor)
                 }
-                
+
                 Spacer()
-                
+
                 Image(systemName: "slider.horizontal.3")
                     .font(.system(size: 24))
                     .foregroundColor(darkTextColor)
-                
             }
             .padding(.horizontal)
             .padding(.bottom, 30)
 
             // Dynamic Venue filter buttons
-            // Venue filter buttons
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(Array(Set(venuesViewModel.venues.map { $0.name })), id: \.self) { venueName in
@@ -58,7 +55,7 @@ struct MainContentView: View {
             }
             .padding(.horizontal)
             .padding(.bottom, 30)
-            
+
             // Game cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -68,11 +65,11 @@ struct MainContentView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 180, height: 180) // Adjusted size
                             .cornerRadius(20)
-                        
+
                         Text("Yellow theme Interior")
                             .font(.headline)
                             .foregroundColor(darkTextColor)
-                        
+
                         Text("Central Park")
                             .font(.subheadline)
                             .foregroundColor(lightGrayColor)
@@ -81,18 +78,18 @@ struct MainContentView: View {
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         Image("maidan") // Replace with your image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 180, height: 180) // Adjusted size
                             .cornerRadius(20)
-                        
+
                         Text("Gray theme Interior")
                             .font(.headline)
                             .foregroundColor(darkTextColor)
-                        
+
                         Text("Riverfront Stadium")
                             .font(.subheadline)
                             .foregroundColor(lightGrayColor)
@@ -106,13 +103,13 @@ struct MainContentView: View {
             }
             .padding(.bottom, 30)
 
-            // Players Near You section (this remains the same)
+            // Players Near You section
             VStack(alignment: .leading) {
                 Text("Players Near You")
                     .font(.headline)
                     .foregroundColor(darkTextColor)
                     .padding(.horizontal)
-                
+
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 15) {
                         ForEach(0..<6) { _ in
@@ -126,7 +123,7 @@ struct MainContentView: View {
                 }
             }
             .padding(.bottom, 60)
-            
+
             // Custom tab bar with navigation
             HStack {
                 Spacer()
@@ -142,20 +139,19 @@ struct MainContentView: View {
                         .foregroundColor(darkTextColor)
                 }
                 Spacer()
-                NavigationLink(destination: ChatbotView()) {  // Replace with your Chatbot view
-                    Image(systemName: "message.fill") // Changed icon to represent chatbot
+                NavigationLink(destination: ChatbotView()) {
+                    Image(systemName: "message.fill")
                         .font(.system(size: 28))
                         .foregroundColor(darkTextColor)
                 }
                 Spacer()
-                NavigationLink(destination: ProfileView()) {  // Replace with your Profile view
+                NavigationLink(destination: ProfileView()) {
                     Image(systemName: "person.fill")
                         .font(.system(size: 28))
                         .foregroundColor(darkTextColor)
                 }
                 Spacer()
             }
-
             .background(Color.white.shadow(radius: 5))
             .background(Color.white)
             .cornerRadius(20)
@@ -166,10 +162,10 @@ struct MainContentView: View {
         .onAppear {
             venuesViewModel.fetchVenues()
             fetchUserName()
-                
         }
+        .navigationBarBackButtonHidden(true) // Hide the back button
     }
-    
+
     // Function to fetch user's first and last name from Firestore
     func fetchUserName() {
         guard let userId = Auth.auth().currentUser?.uid else {
@@ -191,10 +187,7 @@ struct MainContentView: View {
             }
         }
     }
-
 }
-
-
 
 struct MainContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -91,15 +91,17 @@ struct CreateGameView2: View {
                 Button(action: {
                     // Action to go to the next screen
                 }) {
-                    Text("Got it!")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.black)
-                        .cornerRadius(10)
-                }
+                    NavigationLink(destination: CreateGameView3()){
+                        
+                        Text("Got it!")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.black)
+                            .cornerRadius(10)
+                    }}
                 .padding(.horizontal)
                 
                 Spacer()
