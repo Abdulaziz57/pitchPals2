@@ -44,6 +44,8 @@ struct CreateGameView3: View {
                 venuesViewModel.fetchVenues()
             }
         }
+        .navigationBarBackButtonHidden(true)  // Hide the back button
+
     }
 
     private func createGame() {

@@ -106,6 +106,7 @@ struct PasswordChangeView: View {
         .navigationBarBackButtonHidden(true) // Optionally hide the back button
         .navigationTitle("")
         .navigationBarHidden(true)
+        
     }
 
     private func resetPassword() {

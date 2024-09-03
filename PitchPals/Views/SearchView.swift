@@ -175,6 +175,7 @@ struct SearchView: View {
         .background(Color.white.shadow(radius: 5))
         .background(Color.white)
         .cornerRadius(20)
+        .navigationBarBackButtonHidden(true)  // Hide the back button
         .padding(.top, 10)
         .edgesIgnoringSafeArea(.bottom)
     }

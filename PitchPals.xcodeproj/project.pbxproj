@@ -16,13 +16,11 @@
 		F245CE632C855E5A005DB2A7 /* ChatMesssage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE602C855DEF005DB2A7 /* ChatMesssage.swift */; };
 		F245CE642C855E5E005DB2A7 /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE5E2C855AC7005DB2A7 /* ChatbotViewModel.swift */; };
 		F245CE652C855E5F005DB2A7 /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE5E2C855AC7005DB2A7 /* ChatbotViewModel.swift */; };
-		F245CE672C855FE1005DB2A7 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE662C855FE1005DB2A7 /* ApiCaller.swift */; };
 		F245CE6A2C856119005DB2A7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE692C856119005DB2A7 /* OpenAISwift */; };
 		F245CE6C2C856246005DB2A7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE6B2C856246005DB2A7 /* OpenAISwift */; };
 		F245CE6E2C85624F005DB2A7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE6D2C85624F005DB2A7 /* OpenAISwift */; };
 		F245CE712C856B39005DB2A7 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE702C856B39005DB2A7 /* OpenAI */; };
-		F245CE722C856D9F005DB2A7 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE662C855FE1005DB2A7 /* ApiCaller.swift */; };
-		F245CE732C856D9F005DB2A7 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245CE662C855FE1005DB2A7 /* ApiCaller.swift */; };
+		F245CE752C857681005DB2A7 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = F245CE742C857681005DB2A7 /* FirebaseVertexAI-Preview */; };
 		F2535EC72C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC82C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
 		F2535EC92C7D10CF008F45A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */; };
@@ -115,7 +113,6 @@
 		F245CE5C2C84112F005DB2A7 /* SubscribtionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribtionManager.swift; sourceTree = "<group>"; };
 		F245CE5E2C855AC7005DB2A7 /* ChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewModel.swift; sourceTree = "<group>"; };
 		F245CE602C855DEF005DB2A7 /* ChatMesssage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMesssage.swift; sourceTree = "<group>"; };
-		F245CE662C855FE1005DB2A7 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		F2535EC62C7D10CF008F45A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2535EDB2C7ED3B0008F45A1 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		F29F1F5A2B5DB5540085A9D0 /* PitchPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPalsApp.swift; sourceTree = "<group>"; };
@@ -190,6 +187,7 @@
 				F27E3FBE2C7C2EE800ECABA0 /* FirebaseDatabase in Frameworks */,
 				F264D9382C7A5BFF001B3214 /* Stripe in Frameworks */,
 				F245CE712C856B39005DB2A7 /* OpenAI in Frameworks */,
+				F245CE752C857681005DB2A7 /* FirebaseVertexAI-Preview in Frameworks */,
 				F264D93A2C7A5BFF001B3214 /* StripeApplePay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +356,6 @@
 				F29F1F6A2B5DB5560085A9D0 /* PitchPalsTests */,
 				F29F1F742B5DB5560085A9D0 /* PitchPalsUITests */,
 				F245CE5C2C84112F005DB2A7 /* SubscribtionManager.swift */,
-				F245CE662C855FE1005DB2A7 /* ApiCaller.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -392,6 +389,7 @@
 				F245CE582C840754005DB2A7 /* SDWebImageSwiftUI */,
 				F245CE692C856119005DB2A7 /* OpenAISwift */,
 				F245CE702C856B39005DB2A7 /* OpenAI */,
+				F245CE742C857681005DB2A7 /* FirebaseVertexAI-Preview */,
 			);
 			productName = PitchPals;
 			productReference = F29F20032B6064D50085A9D0 /* PitchPals.app */;
@@ -546,7 +544,6 @@
 				F29F1FF02B5DC4FB0085A9D0 /* Message.swift in Sources */,
 				F29F1F9A2B5DBF690085A9D0 /* ProfileView.swift in Sources */,
 				F29F1FD82B5DC4860085A9D0 /* SignUpViewViewModel.swift in Sources */,
-				F245CE672C855FE1005DB2A7 /* ApiCaller.swift in Sources */,
 				F29F1F5D2B5DB5540085A9D0 /* MainView.swift in Sources */,
 				F29F1FC42B5DC3E00085A9D0 /* VenusViewModel.swift in Sources */,
 				F29F1FE82B5DC4CD0085A9D0 /* PasswordChangeViewViewModel.swift in Sources */,
@@ -587,7 +584,6 @@
 				F245CE642C855E5E005DB2A7 /* ChatbotViewModel.swift in Sources */,
 				F29F1F6C2B5DB5560085A9D0 /* PitchPalsTests.swift in Sources */,
 				F245CE622C855E59005DB2A7 /* ChatMesssage.swift in Sources */,
-				F245CE722C856D9F005DB2A7 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +595,6 @@
 				F29F1F762B5DB5560085A9D0 /* PitchPalsUITests.swift in Sources */,
 				F245CE632C855E5A005DB2A7 /* ChatMesssage.swift in Sources */,
 				F29F1F782B5DB5560085A9D0 /* PitchPalsUITestsLaunchTests.swift in Sources */,
-				F245CE732C856D9F005DB2A7 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +987,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F245CE6F2C856B39005DB2A7 /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
+		};
+		F245CE742C857681005DB2A7 /* FirebaseVertexAI-Preview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F29F1F842B5DB6190085A9D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseVertexAI-Preview";
 		};
 		F264D9372C7A5BFF001B3214 /* Stripe */ = {
 			isa = XCSwiftPackageProductDependency;
