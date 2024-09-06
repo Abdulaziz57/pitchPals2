@@ -82,9 +82,10 @@ struct SignInView: View {
                 .padding(.horizontal, 24)
                 .padding(.top, 8)
                 
-                // Add this check
-                NavigationLink("", destination: MainContentView(), isActive: $navigateToMainContent)
-                    .hidden()
+                // Navigation to MainContentView
+                NavigationLink(destination: MainContentView(), isActive: $navigateToMainContent) {
+                    EmptyView() // Invisible navigation link for programmatic navigation
+                }.hidden()
                 
                 Divider()
                     .background(Color.gray)
@@ -125,13 +126,17 @@ struct SignInView: View {
                 .padding(.top, 10)
             }
             .padding(.top) // Adjust as needed to match the design
-            .navigationBarBackButtonHidden(true) // Hide the back button
+
         }
         .onAppear {
             viewModel.onSignInSuccess = {
                 self.navigateToMainContent = true
             }
         }
+        
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
+        .navigationBarHidden(true) 
     }
 }
 

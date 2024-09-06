@@ -82,9 +82,10 @@ struct CreateGameView: View {
                 Spacer()
             }
             .padding()
-                
-            .navigationBarBackButtonHidden(true)
         }
+            
+    .navigationBarBackButtonHidden(true)
+
     }
 }
 

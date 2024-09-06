@@ -124,6 +124,9 @@ struct HomeView: View {
                 Spacer()
                 
             }
+            
+            .navigationBarHidden(true)  // Ensure the navigation bar is hidden
+
         }
         
     }

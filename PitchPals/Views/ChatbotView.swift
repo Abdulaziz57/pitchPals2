@@ -10,7 +10,7 @@ import OpenAI
 class ChatController: ObservableObject {
     @Published var messages: [Message] = []
     
-    let openAI = OpenAI(apiToken: "")
+    let openAI = OpenAI(apiToken: "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")
     
     func sendNewMessage(content: String) {
         let userMessage = Message(content: content, isUser: true)
@@ -178,6 +178,8 @@ struct ChatbotView: View {
         .cornerRadius(20)
         .padding(.bottom, 25)
         .padding(.horizontal, 10)
+        .navigationBarBackButtonHidden(true) // Hide the back button
+
     }
     
     // MARK: - Helper Methods

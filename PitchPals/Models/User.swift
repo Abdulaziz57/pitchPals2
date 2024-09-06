@@ -63,5 +63,39 @@ struct User: Identifiable, Codable {
 }
 
 extension User {
+    init?(id: String, dictionary: [String: Any]) {
+        guard let username = dictionary["username"] as? String,
+              let email = dictionary["email"] as? String,
+              let firstName = dictionary["firstName"] as? String,
+              let lastName = dictionary["lastName"] as? String,
+              let profileImageUrl = dictionary["profileImageUrl"] as? String,
+              let statisticsDict = dictionary["statistics"] as? [String: Any],
+              let gamesPlayed = statisticsDict["gamesPlayed"] as? Int,
+              let gamesWon = statisticsDict["gamesWon"] as? Int,
+              let gamesLost = statisticsDict["gamesLost"] as? Int,
+              let totalGoals = statisticsDict["totalGoals"] as? Int,
+              let following = dictionary["following"] as? [String],
+              let followers = dictionary["followers"] as? [String],
+              let pastGames = dictionary["pastGames"] as? [String],
+              let upcomingGames = dictionary["upcomingGames"] as? [String],
+              let rankString = dictionary["rank"] as? String,
+              let rank = UserRank(rawValue: rankString) else {
+            return nil
+        }
+        
+        self.id = id
+        self.username = username
+        self.email = email
+        self.firstName = firstName
+        self.lastName = lastName
+        self.profileImageUrl = profileImageUrl
+        self.statistics = UserStatistics(gamesPlayed: gamesPlayed, gamesWon: gamesWon, gamesLost: gamesLost, totalGoals: totalGoals)
+        self.following = following
+        self.followers = followers
+        self.pastGames = pastGames
+        self.upcomingGames = upcomingGames
+        self.rank = rank
+    }
+        
     static var MOCK_USER = User(id: UUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0), following: ["String"], followers: ["String"], pastGames: ["String"], upcomingGames: ["String"], rank: .bronze)
 }
