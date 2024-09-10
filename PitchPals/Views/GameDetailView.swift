@@ -21,152 +21,157 @@ struct GameDetailView: View {
     @State private var waitlist: [String] = [] // List of waitlisted users
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Full-width image at the top
-            ZStack(alignment: .topLeading) {
-                AsyncImage(url: URL(string: venue.pictureUrl)) { image in
-                    image
-                        .resizable()
-                        .scaledToFill() // Ensures the image covers the full width
-                        .frame(height: 250) // Adjust height as needed
-                        .clipped() // Ensures the image doesn’t overflow
-                } placeholder: {
-                    ProgressView()
-                        .frame(height: 250)
-                }
-
-                // Circular Back Button on top of the image
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.black)
-                        .padding(10)
-                        .background(Circle().fill(Color.white))
-                        .shadow(radius: 5)
-                }
-                .padding(.leading, 16) // Align back button to the left
-                .padding(.top, 16)     // Align back button to the top
-            }
-    
+        ScrollView {
             
-            // Game details card
-            VStack(spacing: 15) {
-                // Game Title
-                HStack {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("\(formattedDate(game.date)) @\(venue.name)")
-                            .font(.title2)
-                            .bold()
-                            .padding(.bottom, 10)
-
-                        Text("\(venue.pitchSize) a side by @\(user.username)")
-                            .foregroundColor(.gray)
+            VStack(spacing: 0) {
+                // Full-width image at the top
+                ZStack(alignment: .topLeading) {
+                    AsyncImage(url: URL(string: venue.pictureUrl)) { image in
+                        image
+                            .resizable()
+                            .scaledToFill() // Ensures the image covers the full width
+                            .frame(height: 250) // Adjust height as needed
+                            .clipped() // Ensures the image doesn’t overflow
+                    } placeholder: {
+                        ProgressView()
+                            .frame(height: 250)
                     }
-                    Spacer()
-                }
-                
-                Rectangle()
-                    .frame(height: 0.4)
-                    .foregroundColor(Color.gray)
-                    .padding(.horizontal, 10)
-                    .padding(.top, 20)
-                    .padding(.bottom, 20)
-
-                
-                
-                
-                // Game info
-                HStack {
-                    Image(systemName: "calendar")
-                    Text("\(formattedDate(game.date))")
-                        .font(.headline)
                     
-                    Spacer()
+                    // Circular Back Button on top of the image
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.black)
+                            .padding(10)
+                            .background(Circle().fill(Color.white))
+                            .shadow(radius: 5)
+                    }
+                    .padding(.leading, 16) // Align back button to the left
+                    .padding(.top, 16)     // Align back button to the top
+                }
+                
+                
+                // Game details card
+                VStack(spacing: 15) {
+                    // Game Title
+                    HStack {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("\(formattedDate(game.date)) @\(venue.name)")
+                                .font(.title2)
+                                .bold()
+                                .padding(.bottom, 10)
+                            
+                            Text("\(venue.pitchSize) a side by @\(user.username)")
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                    }
                     
-                }
-                
-                HStack {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text(venue.location)
-                        .font(.headline)
-                    Spacer()
-                        .padding(.bottom, 35)
-
-                }
-                
-                // Player count
-                HStack {
-                    Text("\(joinedPlayers.count) attending")
-                        .font(.subheadline)
-                    Spacer()
-                }
-                
-                // List of joined players (avatars)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 10) {
-                        ForEach(joinedPlayers, id: \.id) { player in
-                            playerAvatarView(for: player)
+                    Rectangle()
+                        .frame(height: 0.4)
+                        .foregroundColor(Color.gray)
+                        .padding(.horizontal, 10)
+                        .padding(.top, 20)
+                        .padding(.bottom, 20)
+                    
+                    
+                    
+                    
+                    // Game info
+                    HStack {
+                        Image(systemName: "calendar")
+                        Text("\(formattedDate(game.date))")
+                            .font(.headline)
+                        
+                        Spacer()
+                        
+                    }
+                    
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                        Text(venue.location)
+                            .font(.headline)
+                        Spacer()
+                            .padding(.bottom, 35)
+                        
+                    }
+                    
+                    // Player count
+                    HStack {
+                        Text("\(joinedPlayers.count) attending")
+                            .font(.subheadline)
+                        Spacer()
+                    }
+                    
+                    // List of joined players (avatars)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(joinedPlayers, id: \.id) { player in
+                                playerAvatarView(for: player)
+                            }
                         }
                     }
-                }
-                
-                // Game Description and Rules
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Game Rules")
-                        .font(.headline)
-                    Text("""
-                    • 2 hour game
-                    • Be on time 10-15 minutes before kickoff
-                    • Bring 50 to pay the keepers
-                    • Anyone who gets late 15 minutes fill get a warning
-                    • No shouting, No aggressive behavior
-                    """)
+                    
+                    // Game Description and Rules
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Game Rules")
+                            .font(.headline)
+                        Text("""
+                        • 2 hour game
+                        • Be on time 10-15 minutes before kickoff
+                        • Bring 50 to pay the keepers
+                        • Anyone who gets late 15 minutes will get a warning
+                        • No shouting, No aggressive behavior
+                        """)
                         .font(.body)
                         .foregroundColor(.gray)
-                    
-                    Text("Venue: \(venue.name)")
-                        .font(.subheadline)
-                        .padding(.top, 10)
+                        
+                        Text("Venue: \(venue.name)")
+                            .font(.subheadline)
+                            .padding(.top, 10)
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
-            }
-            .padding()
-            .background(Color.white)
-            .cornerRadius(15)
-            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
-            .padding(.horizontal)
-            .offset(y: -30)
-            
-            Spacer()
-            
-            // Action buttons
-            // Update the action buttons section
-            Button(action: {
-                if isJoined {
-                    leaveGame()
-                } else {
-                    joinGame()
+                .padding()
+                .background(Color.white)
+                .cornerRadius(15)
+                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
+                .padding(.horizontal)
+                .offset(y: -30)
+                
+                Spacer()
+                
+                // Action buttons
+                // Update the action buttons section
+                Button(action: {
+                    if isJoined {
+                        leaveGame()
+                    } else {
+                        joinGame()
+                    }
+                }) {
+                    Text(isJoined ? "Leave" : "Join")
+                        .bold()
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(isJoined ? Color.red : Color.blue)
+                        .cornerRadius(10)
                 }
-            }) {
-                Text(isJoined ? "Leave" : "Join")
-                    .bold()
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(isJoined ? Color.red : Color.blue)
-                    .cornerRadius(10)
+                
+                .padding(.horizontal)
+                .padding(.bottom, 10)
+                
             }
-
-            .padding(.horizontal)
-            .padding(.bottom, 10)
-
+            .onAppear {
+                loadPlayers()
+                checkIfUserJoined()
+                loadWaitlist()
+            }
+            // Hide the back button
         }
-        .onAppear {
-            loadPlayers()
-            checkIfUserJoined()
-            loadWaitlist()
-        }
+        .navigationBarBackButtonHidden(true) 
     }
     
     // MARK: - Subviews
@@ -287,6 +292,9 @@ struct GameDetailView: View {
         formatter.timeStyle = .short
         return formatter.string(from: date)
     }
+    
+    
+    
 }
 
 // MARK: - Preview

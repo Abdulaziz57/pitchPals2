@@ -3,8 +3,10 @@
 //
 //  Created by Abdulaziz Al Mannai on 22/01/2024.
 //
+
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAuth
 
 // MARK: - SearchView
 struct SearchView: View {
@@ -14,6 +16,8 @@ struct SearchView: View {
     @State private var searchText: String = ""
     @State private var games: [Game] = []
     @State private var venues: [Venue] = []
+    @State private var currentUser: User? // Store the logged-in user
+
     @State private var users: [User] = [] // Store all users for profile images and names
     
     var filteredGames: [Game] {
@@ -40,14 +44,23 @@ struct SearchView: View {
             .navigationTitle("Search Games")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    addGameButton
+                    if let user = currentUser {
+                        if user.rank == .gold { // Only show if user rank is Gold
+                            addGameButton
+                        } else {
+                            Text("Rank: \(user.rank.rawValue)") // Debugging output
+                        }
+                    } else {
+                        Text("User not loaded") // If currentUser is nil, show this
+                    }
                 }
             }
-            .onAppear(perform: loadData)
+            .onAppear(perform: {
+                loadData()
+                fetchCurrentUser()  // Fetch the current user from Firestore
+            })
         }
-        
         .navigationBarBackButtonHidden(true) // Hide the back button
-
     }
     
     // MARK: - Subviews
@@ -260,6 +273,27 @@ struct SearchView: View {
     
     func fetchVenue(for game: Game) -> Venue? {
         venues.first { $0.id == game.venueId.documentID }
+    }
+    
+    func fetchCurrentUser() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No user ID found")
+            return
+        }
+
+        let db = Firestore.firestore()
+        let docRef = db.collection("Users").document(userId)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let userData = document.data() {
+                    self.currentUser = User(id: userId, dictionary: userData)
+                    print("Fetched user data: \(self.currentUser?.rank.rawValue ?? "Unknown rank")")
+                }
+            } else {
+                print("User document does not exist")
+            }
+        }
     }
 
     func fetchVenueName(for game: Game) -> String {
