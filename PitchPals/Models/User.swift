@@ -22,8 +22,6 @@ struct User: Identifiable, Codable {
     var lastName: String
     var profileImageUrl: String
     var statistics: UserStatistics
-    var following: [String] // User IDs of people the user is following
-    var followers: [String] // User IDs of followers
     var pastGames: [String] // Game IDs of past games
     var upcomingGames: [String] // Game IDs of upcoming games
     var rank: UserRank = .bronze  // Default rank is Bronze
@@ -52,8 +50,6 @@ struct User: Identifiable, Codable {
                 "gamesLost": statistics.gamesLost,
                 "totalGoals": statistics.totalGoals
             ],
-            "following": following,
-            "followers": followers,
             "pastGames": pastGames,
             "upcomingGames": upcomingGames,
             "rank": rank.rawValue  // Save the rank as a string
@@ -74,8 +70,6 @@ extension User {
               let gamesWon = statisticsDict["gamesWon"] as? Int,
               let gamesLost = statisticsDict["gamesLost"] as? Int,
               let totalGoals = statisticsDict["totalGoals"] as? Int,
-              let following = dictionary["following"] as? [String],
-              let followers = dictionary["followers"] as? [String],
               let pastGames = dictionary["pastGames"] as? [String],
               let upcomingGames = dictionary["upcomingGames"] as? [String],
               let rankString = dictionary["rank"] as? String,
@@ -90,12 +84,10 @@ extension User {
         self.lastName = lastName
         self.profileImageUrl = profileImageUrl
         self.statistics = UserStatistics(gamesPlayed: gamesPlayed, gamesWon: gamesWon, gamesLost: gamesLost, totalGoals: totalGoals)
-        self.following = following
-        self.followers = followers
         self.pastGames = pastGames
         self.upcomingGames = upcomingGames
         self.rank = rank
     }
         
-    static var MOCK_USER = User(id: UUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0), following: ["String"], followers: ["String"], pastGames: ["String"], upcomingGames: ["String"], rank: .bronze)
+    static var MOCK_USER = User(id: UUID().uuidString, username: "abdulaziz57", email: "a.mannai@hotmail.com", firstName: "abdulaziz", lastName: "al mannai", profileImageUrl: "String", statistics: UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0), pastGames: ["String"], upcomingGames: ["String"], rank: .bronze)
 }

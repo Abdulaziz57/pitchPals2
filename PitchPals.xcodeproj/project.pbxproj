@@ -47,10 +47,10 @@
 		F29F1F9E2B5DC0170085A9D0 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */; };
 		F29F1FA02B5DC0230085A9D0 /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */; };
 		F29F1FA22B5DC0340085A9D0 /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */; };
-		F29F1FA42B5DC03B0085A9D0 /* VenueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA32B5DC03B0085A9D0 /* VenueDetailView.swift */; };
+		F29F1FA42B5DC03B0085A9D0 /* ImageCropperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA32B5DC03B0085A9D0 /* ImageCropperView.swift */; };
 		F29F1FA62B5DC0470085A9D0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA52B5DC0470085A9D0 /* SearchView.swift */; };
-		F29F1FA82B5DC0500085A9D0 /* MessagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA72B5DC0500085A9D0 /* MessagesListView.swift */; };
-		F29F1FAC2B5DC05D0085A9D0 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FAB2B5DC05D0085A9D0 /* NotificationsView.swift */; };
+		F29F1FA82B5DC0500085A9D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FA72B5DC0500085A9D0 /* SettingsView.swift */; };
+		F29F1FAC2B5DC05D0085A9D0 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FAB2B5DC05D0085A9D0 /* ProfileDetailView.swift */; };
 		F29F1FAE2B5DC0670085A9D0 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FAD2B5DC0670085A9D0 /* ChatbotView.swift */; };
 		F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB12B5DC0800085A9D0 /* SignInView.swift */; };
 		F29F1FB42B5DC0870085A9D0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */; };
@@ -60,8 +60,7 @@
 		F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */; };
 		F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */; };
 		F29F1FC42B5DC3E00085A9D0 /* VenusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */; };
-		F29F1FC62B5DC42E0085A9D0 /* MessageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC52B5DC42E0085A9D0 /* MessageDetailView.swift */; };
-		F29F1FCC2B5DC4440085A9D0 /* UserProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FCB2B5DC4440085A9D0 /* UserProfileEditView.swift */; };
+		F29F1FC62B5DC42E0085A9D0 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FC52B5DC42E0085A9D0 /* ContactView.swift */; };
 		F29F1FCE2B5DC44B0085A9D0 /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FCD2B5DC44B0085A9D0 /* PasswordChangeView.swift */; };
 		F29F1FD02B5DC4500085A9D0 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */; };
 		F29F1FD22B5DC4680085A9D0 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */; };
@@ -82,6 +81,7 @@
 		F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F29F200D2B66FEE30085A9D0 /* GoogleSignInSwift */; };
 		F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20112B679CAE0085A9D0 /* MainContentView.swift */; };
 		F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */; };
+		F2CA79AA2C92207800F5C7C6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F2CA79A92C92207800F5C7C6 /* FirebaseStorage */; };
 		F2D9505C2BC0D98E0018EDB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505B2BC0D98E0018EDB3 /* Settings.swift */; };
 		F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505D2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift */; };
 		F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505F2BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift */; };
@@ -128,10 +128,10 @@
 		F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		F29F1F9F2B5DC0230085A9D0 /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
 		F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListView.swift; sourceTree = "<group>"; };
-		F29F1FA32B5DC03B0085A9D0 /* VenueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailView.swift; sourceTree = "<group>"; };
+		F29F1FA32B5DC03B0085A9D0 /* ImageCropperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperView.swift; sourceTree = "<group>"; };
 		F29F1FA52B5DC0470085A9D0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		F29F1FA72B5DC0500085A9D0 /* MessagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListView.swift; sourceTree = "<group>"; };
-		F29F1FAB2B5DC05D0085A9D0 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		F29F1FA72B5DC0500085A9D0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F29F1FAB2B5DC05D0085A9D0 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		F29F1FAD2B5DC0670085A9D0 /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		F29F1FB12B5DC0800085A9D0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -141,8 +141,7 @@
 		F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenusViewModel.swift; sourceTree = "<group>"; };
-		F29F1FC52B5DC42E0085A9D0 /* MessageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailView.swift; sourceTree = "<group>"; };
-		F29F1FCB2B5DC4440085A9D0 /* UserProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditView.swift; sourceTree = "<group>"; };
+		F29F1FC52B5DC42E0085A9D0 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		F29F1FCD2B5DC44B0085A9D0 /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 		F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		F29F1FD12B5DC4680085A9D0 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
@@ -187,6 +186,7 @@
 				F27E3FBE2C7C2EE800ECABA0 /* FirebaseDatabase in Frameworks */,
 				F264D9382C7A5BFF001B3214 /* Stripe in Frameworks */,
 				F245CE712C856B39005DB2A7 /* OpenAI in Frameworks */,
+				F2CA79AA2C92207800F5C7C6 /* FirebaseStorage in Frameworks */,
 				F245CE752C857681005DB2A7 /* FirebaseVertexAI-Preview in Frameworks */,
 				F264D93A2C7A5BFF001B3214 /* StripeApplePay in Frameworks */,
 			);
@@ -294,14 +294,13 @@
 				F29F1F9B2B5DC00D0085A9D0 /* CreateGameView3.swift */,
 				F29F1F9D2B5DC0170085A9D0 /* GameDetailView.swift */,
 				F29F1FA12B5DC0340085A9D0 /* VenueListView.swift */,
-				F29F1FA32B5DC03B0085A9D0 /* VenueDetailView.swift */,
+				F29F1FA32B5DC03B0085A9D0 /* ImageCropperView.swift */,
 				F29F1F992B5DBF690085A9D0 /* ProfileView.swift */,
-				F29F1FAB2B5DC05D0085A9D0 /* NotificationsView.swift */,
-				F29F1FA72B5DC0500085A9D0 /* MessagesListView.swift */,
-				F29F1FC52B5DC42E0085A9D0 /* MessageDetailView.swift */,
-				F29F1FCB2B5DC4440085A9D0 /* UserProfileEditView.swift */,
-				F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */,
+				F29F1FAB2B5DC05D0085A9D0 /* ProfileDetailView.swift */,
+				F29F1FA72B5DC0500085A9D0 /* SettingsView.swift */,
 				F245CE5A2C8410BD005DB2A7 /* SubscribtionView.swift */,
+				F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */,
+				F29F1FC52B5DC42E0085A9D0 /* ContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +389,7 @@
 				F245CE692C856119005DB2A7 /* OpenAISwift */,
 				F245CE702C856B39005DB2A7 /* OpenAI */,
 				F245CE742C857681005DB2A7 /* FirebaseVertexAI-Preview */,
+				F2CA79A92C92207800F5C7C6 /* FirebaseStorage */,
 			);
 			productName = PitchPals;
 			productReference = F29F20032B6064D50085A9D0 /* PitchPals.app */;
@@ -535,12 +535,11 @@
 				F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */,
 				F29F1FD02B5DC4500085A9D0 /* AboutView.swift in Sources */,
 				F29F1FB82B5DC2910085A9D0 /* MainContentViewModel.swift in Sources */,
-				F29F1FCC2B5DC4440085A9D0 /* UserProfileEditView.swift in Sources */,
 				F29F1FE02B5DC4A90085A9D0 /* MessageDetailViewViewModel.swift in Sources */,
 				F245CE612C855DEF005DB2A7 /* ChatMesssage.swift in Sources */,
 				F29F1FDA2B5DC48C0085A9D0 /* NotificationsViewViewModel.swift in Sources */,
 				F29F1FDE2B5DC4A10085A9D0 /* MessagesListviewViewModel.swift in Sources */,
-				F29F1FA42B5DC03B0085A9D0 /* VenueDetailView.swift in Sources */,
+				F29F1FA42B5DC03B0085A9D0 /* ImageCropperView.swift in Sources */,
 				F29F1FF02B5DC4FB0085A9D0 /* Message.swift in Sources */,
 				F29F1F9A2B5DBF690085A9D0 /* ProfileView.swift in Sources */,
 				F29F1FD82B5DC4860085A9D0 /* SignUpViewViewModel.swift in Sources */,
@@ -558,20 +557,20 @@
 				F29F1FF22B5DC5030085A9D0 /* Notification.swift in Sources */,
 				F29F20072B6064F40085A9D0 /* HomeView.swift in Sources */,
 				F245CE5D2C84112F005DB2A7 /* SubscribtionManager.swift in Sources */,
-				F29F1FC62B5DC42E0085A9D0 /* MessageDetailView.swift in Sources */,
+				F29F1FC62B5DC42E0085A9D0 /* ContactView.swift in Sources */,
 				F29F1F9E2B5DC0170085A9D0 /* GameDetailView.swift in Sources */,
 				F29F1FEC2B5DC4E20085A9D0 /* Game.swift in Sources */,
 				F29F1FE22B5DC4B20085A9D0 /* FollowersListViewViewModel.swift in Sources */,
 				F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */,
 				F245CE5B2C8410BD005DB2A7 /* SubscribtionView.swift in Sources */,
-				F29F1FA82B5DC0500085A9D0 /* MessagesListView.swift in Sources */,
+				F29F1FA82B5DC0500085A9D0 /* SettingsView.swift in Sources */,
 				F29F1FD42B5DC4730085A9D0 /* SettingsViewViewModel.swift in Sources */,
 				F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */,
 				F29F1F5B2B5DB5540085A9D0 /* PitchPalsApp.swift in Sources */,
 				F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */,
 				F29F1FEE2B5DC4F20085A9D0 /* Venue.swift in Sources */,
 				F29F1FB42B5DC0870085A9D0 /* SignUpView.swift in Sources */,
-				F29F1FAC2B5DC05D0085A9D0 /* NotificationsView.swift in Sources */,
+				F29F1FAC2B5DC05D0085A9D0 /* ProfileDetailView.swift in Sources */,
 				F29F1FAE2B5DC0670085A9D0 /* ChatbotView.swift in Sources */,
 				F29F1FCE2B5DC44B0085A9D0 /* PasswordChangeView.swift in Sources */,
 			);
@@ -1037,6 +1036,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F29F200A2B66FECE0085A9D0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		F2CA79A92C92207800F5C7C6 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F29F1F842B5DB6190085A9D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

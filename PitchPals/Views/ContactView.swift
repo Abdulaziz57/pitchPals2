@@ -1,5 +1,5 @@
 //
-//  AboutView.swift
+//  MessageDetailView.swift
 //  PitchPals
 //
 //  Created by Abdulaziz Al Mannai on 22/01/2024.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AboutView: View {
+struct ContactView: View {
     var body: some View {
         VStack {
-            Text("About Us")
+            Text("Contact Us")
                 .font(.largeTitle)
                 .padding()
             Spacer()
@@ -19,5 +19,5 @@ struct AboutView: View {
 }
 
 #Preview {
-    AboutView()
+    ContactView()
 }

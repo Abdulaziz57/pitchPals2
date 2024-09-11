@@ -56,7 +56,7 @@ class SignUpViewViewModel: ObservableObject {
             print("SignUp successful") // Add this line
             
             // Save user details in Firestore
-            let userData = User(id: user.uid, username: self.username, email: self.email, firstName: self.firstName, lastName: self.lastName, profileImageUrl: "Profile-Image-URL", statistics: User.UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0), following: [], followers: [], pastGames: [], upcomingGames: [])
+            let userData = User(id: user.uid, username: self.username, email: self.email, firstName: self.firstName, lastName: self.lastName, profileImageUrl: "Profile-Image-URL", statistics: User.UserStatistics(gamesPlayed: 0, gamesWon: 0, gamesLost: 0, totalGoals: 0),  pastGames: [], upcomingGames: [])
             
             Firestore.firestore().collection("Users").document(user.uid).setData(userData.dictionary) { error in
                 if let error = error {
