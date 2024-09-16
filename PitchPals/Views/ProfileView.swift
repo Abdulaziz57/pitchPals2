@@ -11,6 +11,7 @@ import Firebase
 struct ProfileView: View {
     @State private var username: String = ""
     @State private var email: String = ""
+    let darkTextColor = Color.black
     @State private var phone: String = "(123) 456-7890"
     @State private var profileImageUrl: String = ""
     @State private var gamesPlayed: Int = 0
@@ -164,30 +165,31 @@ struct ProfileView: View {
 
     // Custom Bottom Tab Bar
     private var customTabBar: some View {
+        // Custom tab bar with navigation
         HStack {
             Spacer()
             NavigationLink(destination: MainContentView()) {
-                Image(systemName: "house")
+                Image(systemName: "house.fill")
                     .font(.system(size: 28))
-                    .foregroundColor(.black)
+                    .foregroundColor(darkTextColor)
             }
             Spacer()
             NavigationLink(destination: SearchView()) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 28))
-                    .foregroundColor(.black)
+                    .foregroundColor(darkTextColor)
             }
             Spacer()
             NavigationLink(destination: ChatbotView()) {
-                Image(systemName: "message")
+                Image(systemName: "message.fill")
                     .font(.system(size: 28))
-                    .foregroundColor(.black)
+                    .foregroundColor(darkTextColor)
             }
             Spacer()
             NavigationLink(destination: ProfileView()) {
-                Image(systemName: "person")
+                Image(systemName: "person.fill")
                     .font(.system(size: 28))
-                    .foregroundColor(.black)
+                    .foregroundColor(darkTextColor)
             }
             Spacer()
         }

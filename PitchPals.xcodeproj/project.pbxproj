@@ -81,6 +81,8 @@
 		F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F29F200D2B66FEE30085A9D0 /* GoogleSignInSwift */; };
 		F29F20122B679CAE0085A9D0 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20112B679CAE0085A9D0 /* MainContentView.swift */; };
 		F29F20162B70E2FF0085A9D0 /* CreateGameView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */; };
+		F2A885BE2C98BFDE008BBE6D /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F2A885BD2C98BFDE008BBE6D /* StripePaymentSheet */; };
+		F2A885C02C98C0B4008BBE6D /* PaymentSheetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A885BF2C98C0B4008BBE6D /* PaymentSheetWrapper.swift */; };
 		F2CA79AA2C92207800F5C7C6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F2CA79A92C92207800F5C7C6 /* FirebaseStorage */; };
 		F2D9505C2BC0D98E0018EDB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505B2BC0D98E0018EDB3 /* Settings.swift */; };
 		F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9505D2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift */; };
@@ -164,6 +166,7 @@
 		F29F20112B679CAE0085A9D0 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		F29F20152B70E2FF0085A9D0 /* CreateGameView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView2.swift; sourceTree = "<group>"; };
 		F29F20172B7129910085A9D0 /* soccer-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "soccer-player.png"; path = "PitchPals/Other/Assets/soccer-player.png"; sourceTree = SOURCE_ROOT; };
+		F2A885BF2C98C0B4008BBE6D /* PaymentSheetWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSheetWrapper.swift; sourceTree = "<group>"; };
 		F2D9505B2BC0D98E0018EDB3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F2D9505D2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewViewModel.swift; sourceTree = "<group>"; };
 		F2D9505F2BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatisticsViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 				F245CE592C840754005DB2A7 /* SDWebImageSwiftUI in Frameworks */,
 				F29F200E2B66FEE30085A9D0 /* GoogleSignInSwift in Frameworks */,
 				F29F1F942B5DBBB20085A9D0 /* FirebaseAuth in Frameworks */,
+				F2A885BE2C98BFDE008BBE6D /* StripePaymentSheet in Frameworks */,
 				F29F200C2B66FEE30085A9D0 /* GoogleSignIn in Frameworks */,
 				F29F1F962B5DBE0C0085A9D0 /* FirebaseFirestore in Frameworks */,
 				F264D93C2C7A5BFF001B3214 /* StripeCardScan in Frameworks */,
@@ -299,6 +303,7 @@
 				F29F1FAB2B5DC05D0085A9D0 /* ProfileDetailView.swift */,
 				F29F1FA72B5DC0500085A9D0 /* SettingsView.swift */,
 				F245CE5A2C8410BD005DB2A7 /* SubscribtionView.swift */,
+				F2A885BF2C98C0B4008BBE6D /* PaymentSheetWrapper.swift */,
 				F29F1FCF2B5DC4500085A9D0 /* AboutView.swift */,
 				F29F1FC52B5DC42E0085A9D0 /* ContactView.swift */,
 			);
@@ -390,6 +395,7 @@
 				F245CE702C856B39005DB2A7 /* OpenAI */,
 				F245CE742C857681005DB2A7 /* FirebaseVertexAI-Preview */,
 				F2CA79A92C92207800F5C7C6 /* FirebaseStorage */,
+				F2A885BD2C98BFDE008BBE6D /* StripePaymentSheet */,
 			);
 			productName = PitchPals;
 			productReference = F29F20032B6064D50085A9D0 /* PitchPals.app */;
@@ -530,6 +536,7 @@
 				F29F1FA02B5DC0230085A9D0 /* CreateGameView.swift in Sources */,
 				F2D9505C2BC0D98E0018EDB3 /* Settings.swift in Sources */,
 				F29F1FA62B5DC0470085A9D0 /* SearchView.swift in Sources */,
+				F2A885C02C98C0B4008BBE6D /* PaymentSheetWrapper.swift in Sources */,
 				F29F1FD62B5DC47B0085A9D0 /* SignInViewViewModel.swift in Sources */,
 				F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */,
 				F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */,
@@ -1036,6 +1043,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F29F200A2B66FECE0085A9D0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		F2A885BD2C98BFDE008BBE6D /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F264D9362C7A5BFF001B3214 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentSheet;
 		};
 		F2CA79A92C92207800F5C7C6 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
