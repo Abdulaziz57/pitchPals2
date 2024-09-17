@@ -15,6 +15,8 @@ struct ProfileView: View {
     @State private var phone: String = "(123) 456-7890"
     @State private var profileImageUrl: String = ""
     @State private var gamesPlayed: Int = 0
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+
 
     var body: some View {
         NavigationView {
@@ -230,14 +232,26 @@ struct ProfileView: View {
     }
 
     // Function to log out
+    // Function to log out and navigate to HomeView
     func logOut() {
         do {
             try Auth.auth().signOut()
-            // Redirect to login page or handle post-logout UI
+            // Redirect to the home view after logging out
+            navigateToHome()
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
     }
+
+    // Function to navigate to HomeView
+    func navigateToHome() {
+        // Dismiss the current view and navigate to the home screen
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = UIHostingController(rootView: HomeView())
+            window.makeKeyAndVisible()
+        }
+    }
+
     
 
 }

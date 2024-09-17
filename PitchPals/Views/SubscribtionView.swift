@@ -10,6 +10,7 @@ import SwiftUI
 import Firebase
 import StripePaymentSheet
 import Stripe
+import Foundation
 
 
 struct SubscriptionView: View {
@@ -37,24 +38,21 @@ struct SubscriptionView: View {
                 }
 
                 Spacer()
+            }
+            .padding(.horizontal)
 
+            
+            HStack {
                 Text("Choose Your Plan")
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
                 Spacer()
-
-                // Placeholder to balance the HStack
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.clear)
-                    .padding()
-                    .background(Circle().fill(Color.clear))
             }
             .padding(.horizontal)
-            .padding(.bottom, 10)
 
             ScrollView {
-                VStack(spacing: 10) {
+                VStack(spacing: 20) {
                     ForEach(SubscriptionPlan.allPlans, id: \.self) { plan in
                         SubscriptionPlanCard(plan: plan, isSelected: selectedPlan == plan)
                             .onTapGesture {
@@ -65,6 +63,7 @@ struct SubscriptionView: View {
                     }
                 }
                 .padding(.horizontal)
+                .padding(.top, 10)
             }
 
 
@@ -113,6 +112,8 @@ struct SubscriptionView: View {
             Alert(title: Text("Subscription Status"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
     }
+    
+    
 
     func initiatePayment(for plan: SubscriptionPlan) {
         isProcessingPayment = true
@@ -182,6 +183,7 @@ struct SubscriptionView: View {
             }
         }
     }
+    
 }
 
 // Updated SubscriptionPlan model with features and discounts
@@ -192,23 +194,26 @@ struct SubscriptionPlan: Hashable {
     let originalPrice: String  // Original higher price
     let priceCents: Int
     let tag: String?
+    let period: String
 
     static let yearly = SubscriptionPlan(
         duration: "1 Year",
-        features: ["Save 50%", "7 Days Free"],
+        features: ["Save 50%", "Get 7 Days Free"],
         price: "$60",
         originalPrice: "$120",
         priceCents: 6000,
-        tag: "BEST VALUE"
+        tag: "BEST VALUE",
+        period: "Yearly"
     )
 
     static let threeMonths = SubscriptionPlan(
         duration: "3 Months",
-        features: ["Save 20%", "3 Days Free"],
+        features: ["Save 20%", "Get 3 Days Free"],
         price: "$24",
         originalPrice: "$30",
         priceCents: 2400,
-        tag: "MOST POPULAR"
+        tag: "MOST POPULAR",
+        period: "Quarter"
     )
 
     static let monthly = SubscriptionPlan(
@@ -217,7 +222,9 @@ struct SubscriptionPlan: Hashable {
         price: "$8.40",
         originalPrice: "$10",
         priceCents: 840,
-        tag: nil
+        tag: nil,
+        period: "Monthly"
+
     )
 
     static let allPlans = [yearly, threeMonths, monthly]
@@ -249,29 +256,55 @@ struct SubscriptionPlanCard: View {
                             .font(.caption2)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .padding(4)
+                            .padding(5)
                             .background(tagColor)
-                            .cornerRadius(5)
+                            .cornerRadius(15)
                     }
                 }
 
                 ForEach(plan.features, id: \.self) { feature in
                     HStack(spacing: 5) {
-                        Image(systemName: "circle.fill")
-                            .foregroundColor(.black.opacity(0.9))
-                            .font(.caption)
-
-                        Text(feature)
-                            .foregroundColor(.black)
+                        Text("•")
+                            .foregroundColor(.gray)
                             .font(.subheadline)
+
+                        if feature.contains("7 Days") {
+                            // Split feature into parts and bold only "7 Days"
+                            Text("Get")
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                            Text("7 Days")
+                                .bold()
+                                .foregroundColor(.black)
+                                .font(.subheadline)
+                            Text("Free")
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                        } else if feature.contains("3 Days") {
+                            // Split feature into parts and bold only "3 Days"
+                            Text("Get")
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                            Text("3 Days")
+                                .bold()
+                                .foregroundColor(.black)
+                                .font(.subheadline)
+                            Text("Free")
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                        } else {
+                            Text(feature)
+                                .foregroundColor(.gray)
+                                .font(.subheadline)
+                        }
                     }
                 }
             }
-
+            
             Spacer()
 
             // Right Side: Prices
-            VStack(alignment: .trailing, spacing: 4) {
+            VStack(alignment: .trailing, spacing: 3) {
                 // Original Price with Strikethrough
                 Text(plan.originalPrice)
                     .font(.subheadline)
@@ -283,6 +316,12 @@ struct SubscriptionPlanCard: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                
+                // The plans period basis
+                Text(plan.period)
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
             }
         }
         .padding()
@@ -295,10 +334,13 @@ struct SubscriptionPlanCard: View {
             RoundedRectangle(cornerRadius: 12)
                 .stroke(isSelected ? Color.black : Color.gray.opacity(0.2), lineWidth: 2)
         )
-        .shadow(color: isSelected ? Color.black.opacity(0.3) : Color.gray.opacity(0.1), radius: isSelected ? 6 : 3, x: 0, y: 3)
+        .shadow(color: isSelected ? Color.black.opacity(0.3) : Color.gray.opacity(0.2), radius: isSelected ? 8 : 4, x: 0, y: 4)
         .scaleEffect(isSelected ? 1.02 : 1.0)
         .animation(.easeInOut(duration: 0.2), value: isSelected)
+        .navigationBarBackButtonHidden(true) // Hide the back button
+
     }
+    
 }
 
 

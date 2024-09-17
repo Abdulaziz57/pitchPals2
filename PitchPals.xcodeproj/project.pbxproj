@@ -55,7 +55,7 @@
 		F29F1FB22B5DC0800085A9D0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB12B5DC0800085A9D0 /* SignInView.swift */; };
 		F29F1FB42B5DC0870085A9D0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */; };
 		F29F1FB62B5DC0B90085A9D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB52B5DC0B90085A9D0 /* User.swift */; };
-		F29F1FB82B5DC2910085A9D0 /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */; };
+		F29F1FB82B5DC2910085A9D0 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB72B5DC2910085A9D0 /* AuthenticationViewModel.swift */; };
 		F29F1FBA2B5DC39B0085A9D0 /* SearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */; };
 		F29F1FBE2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */; };
 		F29F1FC02B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */; };
@@ -138,7 +138,7 @@
 		F29F1FB12B5DC0800085A9D0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F29F1FB32B5DC0870085A9D0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F29F1FB52B5DC0B90085A9D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewModel.swift; sourceTree = "<group>"; };
+		F29F1FB72B5DC2910085A9D0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F29F1FB92B5DC39B0085A9D0 /* SearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewViewModel.swift; sourceTree = "<group>"; };
 		F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewViewModel.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 			children = (
 				F29F1FD52B5DC47B0085A9D0 /* SignInViewViewModel.swift */,
 				F29F1FD72B5DC4860085A9D0 /* SignUpViewViewModel.swift */,
-				F29F1FB72B5DC2910085A9D0 /* MainContentViewModel.swift */,
+				F29F1FB72B5DC2910085A9D0 /* AuthenticationViewModel.swift */,
 				F29F1FC32B5DC3E00085A9D0 /* VenusViewModel.swift */,
 				F29F1FBD2B5DC3BD0085A9D0 /* GameDetailViewViewModel.swift */,
 				F29F1FBF2B5DC3CE0085A9D0 /* CreateGameViewViewModel.swift */,
@@ -541,7 +541,7 @@
 				F2D9505E2BC0DAA30018EDB3 /* UserSettingsViewViewModel.swift in Sources */,
 				F2D950602BC0DC5F0018EDB3 /* UserStatisticsViewModel.swift in Sources */,
 				F29F1FD02B5DC4500085A9D0 /* AboutView.swift in Sources */,
-				F29F1FB82B5DC2910085A9D0 /* MainContentViewModel.swift in Sources */,
+				F29F1FB82B5DC2910085A9D0 /* AuthenticationViewModel.swift in Sources */,
 				F29F1FE02B5DC4A90085A9D0 /* MessageDetailViewViewModel.swift in Sources */,
 				F245CE612C855DEF005DB2A7 /* ChatMesssage.swift in Sources */,
 				F29F1FDA2B5DC48C0085A9D0 /* NotificationsViewViewModel.swift in Sources */,
